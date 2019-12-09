@@ -2,67 +2,55 @@
 <html>
     <head>
         <title>往事随风 轻舞飞扬</title>
-        <link rel="stylesheet" href="../css/customer.css">
-        <link rel="stylesheet" href="../css/bootstrap.min.css">
-        <style>
-          * {margin:0;padding:0;}
-         #mobile-menu {position:fixed;top:0;left:0;width:220px;height:100%;background-color:#373737;z-index:9999;}
-         a:hover ,a:focus{text-decoration:none}
-        .mobile-nav ul li a {color:gray;display:block;padding:1em 5%;    border-top:1px solid #4f4f4f;border-bottom:1px solid #292929;transition:all 0.2s ease-out;cursor:pointer;#mobile-menu {position:fixed;top:0;left:0;width:220px;height:100%;background-color:#373737;z-index:9999;transition:all 0.3s ease-in;}}
-        .mobile-nav ul li a:hover {background-color: #23A1F6;color: #ffffff;}
-        .show-nav {transform:translateX(0);}
-        .hide-nav {transform:translateX(-220px);} /*侧滑关键*/
-        .mobile-nav-taggle {height:35px;line-height:35px;width:35px;background-color:#23A1F6;color:#ffffff;display:inline-block;text-align:center;cursor:pointer}
-        .nav.avbar-inverse{position:relative;}
-        .nav-btn {position:absolute;right:20px;top:20px;}
-        </style>
     </head>
     <body>
-       <div id="mobile-menu" class="mobile-nav visible-xs visible-sm">
-        <ul>
-            <li><a href="#">首页</a></li>
-            <li><a href="#">Java</a></li>
-            <li><a href="#">SVN</a></li>
-            <li><a href="#">iOS</a></li>
-        </ul>
-    </div>
-    <!--pc导航栏-->
-    <nav class="navbar-inverse visible-lg visible-md" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <a class="navbar-brand" href="#">菜鸟教程</a>
-            </div>
-            <div>
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">iOS</a></li>
-                    <li><a href="#">SVN</a></li>
-                    <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Java</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!--手机导航栏侧滑-->
-    <div class="nav-btn visible-xs visible-sm">
-        <a href="#" class="mobile-nav-taggle" id="mobile-nav-taggle">
-            <span class="glyphicon glyphicon-align-justify"></span>
-        </a>
-    </div>
+            <link rel="stylesheet" href="../editormd/css/editormd.css" />
+
+        <div id="test-editor">
+            <textarea style="display:none;">### 关于 Editor.md
+        **Editor.md** 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。
+            </textarea>
+        </div>   
+        <h3 id="h3-u6211u7684u7B2Cu4E00u4E2Au5F15u7528"><a name="我的第一个引用" class="reference-link"></a><span class="header-link octicon octicon-link"></span>我的第一个引用</h3><p>123</p>
+        <h3 id="h3--editor-md"><a name="关于 Editor.md" class="reference-link"></a><span class="header-link octicon octicon-link"></span>关于 Editor.md</h3><pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><code><span class="pln">    </span><span class="pun">**</span><span class="typ">Editor</span><span class="pun">.</span><span class="pln">md</span><span class="pun">**</span><span class="pln"> </span><span class="pun">是一款开源的、可嵌入的</span><span class="pln"> </span><span class="typ">Markdown</span><span class="pln"> </span><span class="pun">在线编辑器（组件），基于</span><span class="pln"> </span><span class="typ">CodeMirror</span><span class="pun">、</span><span class="pln">jQuery </span><span class="pun">和</span><span class="pln"> </span><span class="typ">Marked</span><span class="pln"> </span><span class="pun">构建。</span></code></li></ol></pre>
     </body>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script>
-  $("#mobile-nav-taggle").click(function () {
-            var mobileMenu = $("#mobile-menu");
-            if (mobileMenu.hasClass("show-nav")) {
-                setTimeout(function () {
-                    mobileMenu.addClass("hide-nav").removeClass("show-nav");
-                }, 100)
-            }
-            else {
-                setTimeout(function (){
-                    mobileMenu.addClass("show-nav").removeClass("hide-nav");
-                }, 100)
-            }
-        })
-</script>
+    <script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script src="../editormd/editormd.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            testEditor = editormd("test-editor", {
+                styleActiveLine : false,       // disable active line
+                lineNumbers     : false,        // hide line numbersm
+                saveHTMLToTextarea : true,
+                width        : "100%",//宽度
+                height       : 720,//高度
+                // 下面三个选项是设置风格的，每个有什么风格，请看下载插件得examples/themes.html
+                theme        : "lesser-dark",// 工具栏风格
+                previewTheme : "dark",// 预览页面风格
+                editorTheme  : "paraiso-dark",// 设置编辑页面风格
+                path         : '../editormd/lib/',//这块是lib的文件路径，必须设置，否则几个样式css，js访问不到的
+                flowChart : true,//控制流程图编辑
+                sequenceDiagram : true,//控制时序图编辑
+                taskList : true,//任务列表
+                tex  : true,//科学公式
+                emoji : true,//moji表情
+                htmlDecode : "style,script,iframe|on*", // 开启 HTML 标签解析，为了安全性，默认不开启
+                codeFold : true,//ctrl+q代码折叠
+                //                                  saveHTMLToTextarea : true,//这个配置在simple.html中并没有，但是为了能够提交表单，使用这个配置可以让构造出来的HTML代码直接在第二个隐藏的textarea域中，方便post提交表单。这个转换好像有些缺陷，有些配置没有生效，目前还没想到怎么解决，我这里没有用,是在前台读取的时候转换的
+                imageUpload : true,//开启本地图片上传
+                imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+                imageUploadURL : "/index.php/Admin/News/uploadFileMark",//图片上传地址
+                onload : function() {
+                    console.log('onload', this);
+                }
+            });
+            //设置可以添加目录，只需要在上面一行输入 [TOCM]，就会有目录，注意下面要空一行
+            testEditor.config({
+                tocm : true,
+                tocContainer : "",
+                tocDropdown   : false
+            });
+            fullscreen(); 
+        });
+    </script>
 </html>

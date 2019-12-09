@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>往事随风 轻舞飞扬</title>
+        <link rel="stylesheet" href="../css/customer.css">
+        <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" href="../editormd/css/editormd.preview.css">
+    </head>
+    <body>
+        <nav class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    <div class="navbar-header">
+                            <a class="navbar-brand" href="#"><img src="../image/下载.png"/></a>
+                    </div>
+                    <div>
+                            <ul class="nav navbar-nav navbar-left">
+                                <li><a href="#">首页</a></li>
+                                <li><a href="#">文章</a></li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><img src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
+                                <li><a href="#">我的消息 <span class="badge">14</span></a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-off"></span>退出登录</a></li>
+                            </ul>
+                            <ul>
+                              <form class="navbar-form navbar-left " role="search">
+                                <div class="form-group input-group input-group-sm">
+                                  <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
+                                      <span style="background: white;" class="glyphicon glyphicon-search"></span>
+                                  </span>
+                                  <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
+                                  <!-- <span class="input-group-btn">
+                                      <button type="submit" class="btn btn-default" value="Submit"></button>
+                                  </span> -->
+                                </div>
+                              </form>
+                            </ul>
+                    </div>
+                </div>
+            </nav>
+            <div  class="container">
+                <div class="article">
+                        <div class="page-header">
+                                <h3>Title</h3>
+                                <ul class="btn-group btn-group-xs" style="list-style-type: none;">
+                                    <li class="text-info" style="margin:0 10px;float: left;">发布时间：2019 12 08</li>
+                                    <li style="float: left;margin:0 10px;">作者：<a href="#">猹与少年</a></li>
+                                    <li style="float: left;margin:0 10px;"><span class="glyphicon glyphicon-thumbs-up"> 0</span></li>
+                                    <li style="float: left;margin:0 12px;">文章标签：</li>
+
+                                    <button style="margin-right: 5px;" type="button" class="btn btn-default">Cras justo odio</button>
+                                    <button style="margin-right: 5px;" type="button" class="btn btn-default">Dapibus ac facilisis in </button>
+                                    <li style="float: left;margin:0 3px;"><a href="#">更多</a></li>
+                               </ul>        
+                        </div>
+                    <div id="doc-content">
+                        <textarea style="display:none;">####h3
+                        #####h4#### Example
+                        ```javascript
+                        {
+                            onscroll : function(event) {
+                                console.clear();
+                                console.log("onscroll =>", this, this.id, this.settings, event);
+                            },
+                        
+                            onpreviewscroll : function(event) {
+                                console.clear();
+                                console.log("onpreviewscroll =>", this, this.id, this.settings, event);
+                            },
+                        
+                            onload : function() {
+                                this.off("previewscroll"); // unbind before handle
+                        
+                                // Override settings.onpreviewscroll
+                                this.on("previewscroll", function(){
+                                    console.clear();
+                                    console.log("on() => Override settings.onpreviewscroll =>", this, this.id, event, (new Date).getTime());
+                                });
+                        
+                                // defined event bind
+                                this.on("resize", function(){
+                                    console.clear();
+                                    console.log("onresize =>", this, this.id, event, (new Date).getTime());
+                                });
+                            }
+                        }
+                        
+                        // Or
+                        editor.on("resize", function(){
+                            // ...
+                        });
+                        
+                        editor.off("resize");
+                        ```
+                        
+                        # Editor.md
+                        
+                        ![](https://pandao.github.io/editor.md/images/logos/editormd-logo-180x180.png)
+                        
+                        ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
+                        
+                        **目录 (Table of Contents)**
+                        
+                        [TOCM]
+                        
+                        [TOC]
+                        
+                        # Heading 1
+                        ## Heading 2               
+                        ### Heading 3
+                        #### Heading 4
+                        ##### Heading 5
+                        ###### Heading 6
+                        # Heading 1 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        ## Heading 2 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        ### Heading 3 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        #### Heading 4 link [Heading link](https://github.com/pandao/editor.md "Heading link") Heading link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        ##### Heading 5 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        ###### Heading 6 link [Heading link](https://github.com/pandao/editor.md "Heading link")
+                        
+                        #### 标题（用底线的形式）Heading (underline)
+                        
+                        This is an H1
+                        =============
+                        
+                        This is an H2
+                        -------------
+                        
+                        ### 字符效果和横线等
+                                        
+                        ----
+                        
+                        ~~删除线~~ <s>删除线（开启识别HTML标签时）</s>
+                        *斜体字*      _斜体字_
+                        **粗体**  __粗体__
+                        ***粗斜体*** ___粗斜体___
+                        
+                        上标：X<sub>2</sub>，下标：O<sup>2</sup>
+                        
+                        **缩写(同HTML的abbr标签)**
+                        
+                        > 即更长的单词或短语的缩写形式，前提是开启识别HTML标签时，已默认开启
+                        
+                        The <abbr title="Hyper Text Markup Language">HTML</abbr> specification is maintained by the <abbr title="World Wide Web Consortium">W3C</abbr>.
+                        
+                        ### 引用 Blockquotes
+                        
+                        > 引用文本 Blockquotes
+                        
+                        引用的行内混合 Blockquotes
+                                            
+                        > 引用：如果想要插入空白换行`即<br />标签`，在插入处先键入两个以上的空格然后回车即可，[普通链接](http://localhost/)。
+                        
+                        ### 锚点与链接 Links
+                        
+                        [普通链接](http://localhost/)
+                        
+                        [普通链接带标题](http://localhost/ "普通链接带标题")
+                        
+                        直接链接：<https://github.com>
+                        
+                        [锚点链接][anchor-id] 
+                        
+                        [anchor-id]: http://www.this-anchor-link.com/
+                        
+                        [mailto:test.test@gmail.com](mailto:test.test@gmail.com)
+                        
+                        GFM a-tail link @pandao  邮箱地址自动链接 test.test@gmail.com  www@vip.qq.com
+                        
+                        > @pandao
+                        
+                        ### 多语言代码高亮 Codes
+                        
+                        #### 行内代码 Inline code
+                        
+                        执行命令：`npm install marked`
+                        
+                        #### 缩进风格
+                        
+                        即缩进四个空格，也做为实现类似 `<pre>` 预格式化文本 ( Preformatted Text ) 的功能。
+                        
+                            <?php
+                                echo "Hello world!";
+                            ?>
+                            
+                        预格式化文本：
+                        
+                            | First Header  | Second Header |
+                            | ------------- | ------------- |
+                            | Content Cell  | Content Cell  |
+                            | Content Cell  | Content Cell  |
+                        
+                        #### JS代码　
+                        
+                        ```javascript
+                        function test() {
+                            console.log("Hello world!");
+                        }
+                         
+                        (function(){
+                            var box = function() {
+                                return box.fn.init();
+                            };
+                        
+                            box.prototype = box.fn = {
+                                init : function(){
+                                    console.log('box.init()');
+                        
+                                    return this;
+                                },
+                        
+                                add : function(str) {
+                                    alert("add", str);
+                        
+                                    return this;
+                                },
+                        
+                                remove : function(str) {
+                                    alert("remove", str);
+                        
+                                    return this;
+                                }
+                            };
+                            
+                            box.fn.init.prototype = box.fn;
+                            
+                            window.box =box;
+                        })();
+                        </textarea>
+                    </div>
+                    <div class="comment">
+                            <div class="panel panel-default">
+                                    <div class="panel-body">
+                                            <ul class="clearfix">
+                                                    <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
+                                                    <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
+                                                    <li style="float: left;position: relative;top: 6px;">1秒前</li>
+                                                    <li style="float: left;position: relative;top: 6px;">#1楼</li>
+                                                    <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
+                                                    <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
+                                                    <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
+                                                    <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
+                                          </ul> 
+                                          <p style="margin: 5px 12px 5px 80px;" class="pull-left">如果你使用图标是为了表达某些含义（不仅仅是为了装饰用），请确保你所要表达的意思能够通过被辅助设备识别，例如，包含额外的内容并通过 .sr-only 类让你应当提供其他的内容来表示这个控件的意图，这样就能让使用辅助设备的用户知道其作用了。这种情况下，你可以为控件添加 aria-label 属性。</p>                    
+                                    </div>
+                                    <div class="panel-body">
+                                            <ul class="clearfix">
+                                                     <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
+                                                     <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
+                                                     <li style="float: left;position: relative;top: 6px;">1秒前</li>
+                                                     <li style="float: left;position: relative;top: 6px;">#1楼</li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
+                                                     <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
+                                           </ul> 
+                                           <p style="margin: 5px 12px 5px 80px" class="pull-left ">过 .</p>                    
+                                     </div>
+                                     <div class="panel-body">
+                                            <ul class="clearfix">
+                                                     <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
+                                                     <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
+                                                     <li style="float: left;position: relative;top: 6px;">1秒前</li>
+                                                     <li style="float: left;position: relative;top: 6px;">#1楼</li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
+                                                     <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
+                                                     <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
+                                           </ul> 
+                                           <p style="margin: 5px 12px 5px 80px;" class="pull-left">如果你使用图标是为了表达某些含义（不仅仅是为了装饰用），请确保你所要表达的意思能够通过被辅助设备识别，例如，包含额外的内容并通过 .sr-only 类让你应当提供其他的内容来表示这个控件的意图，这样就能让使用辅助设备的用户知道其作用了。这种情况下，你可以为控件添加 aria-label 属性。</p>                    
+                                     </div>
+                                  </div>
+                            
+                    </div>
+                </div>   
+                <div class="sideright" style="float: right;width: 20%;position:sticky;top:  30px;">
+                    <div class="authorinfo" style="float: left;">
+                            <ul class=" list_userbar">
+                                    <li style="float: left;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
+                                    <li class="clearfix" style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
+                                    <p style="margin-top: 10px;clear: left;" class="text-lef text-info">关于作者：</p></<p>
+                                    <li style="float: left;"><p>作者详细信息只要给 .btn-group 加上 .btn-group-* 类，就省去为按钮组中的每个按钮都赋予尺寸类了，如果包含了多个按钮组时也适用。
+                                        </p></li>
+                                </ul>       
+                    </div>
+                    <div class="newarticle" style="float: left;">
+                              <ul class="nav nav-pills nav-stacked">
+                                    <li class=""><h4 class="text-center text-info">最新文章</h4></li>
+                                    <li><a href="#">Tutorials <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
+                                    <li><a href="#">Practice Editor<span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
+                                    <li><a href="#">Gallery <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
+                                    <li><a href="#">Contact <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
+                                </ul>
+                    </div>
+                    <div class="newcomment" style="float: left;">
+                       
+                    </div>
+                </div>
+            </div>
+ </body>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../editormd/lib/marked.min.js"></script>
+<script src="../editormd/lib/prettify.min.js"></script>
+<script src="../editormd/lib/raphael.min.js"></script>
+<script src="../editormd/lib/underscore.min.js"></script>
+<script src="../editormd/lib/sequence-diagram.min.js"></script>
+<script src="../editormd/lib/flowchart.min.js"></script>
+<script src="../editormd/lib/jquery.flowchart.min.js"></script>
+<script src="../editormd/editormd.min.js"></script>
+<script type="text/javascript">
+    var testEditor;
+    $(function () {
+        testEditor = editormd.markdownToHTML("doc-content", {//注意：这里是上面DIV的id
+            htmlDecode: "style,script,iframe",
+            emoji: true,
+            tocm:true,
+            taskList: true,
+            tex: true, // 默认不解析
+            flowChart: true, // 默认不解析
+            sequenceDiagram: true, // 默认不解析
+            codeFold: true,
+        })})
+</script>
+</html>    

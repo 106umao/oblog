@@ -23,3 +23,18 @@
 .article_list{
     width: 50%;
 }
+
+.sideright{
+
+    width: 20%;
+    float: right;
+}
+
+.article{
+    width: 75%;
+    float: left;
+}
+.comment li{
+    margin-right: 15px;
+    list-style-type: none;
+}
