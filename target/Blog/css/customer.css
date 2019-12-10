@@ -1,0 +1,40 @@
+.avatar{
+    width: 50px;
+    height: 50px;
+}
+#frame{
+    float: left;
+    position: relative;
+    top: 100px;
+}
+
+
+.list_userbar li{
+    position: relative;
+    left: -40px;
+    margin-right: 5px;
+    list-style-type: none;
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: "/ ";
+    padding: 0 5px;
+}
+.article_list{
+    width: 50%;
+}
+
+.sideright{
+
+    width: 20%;
+    float: right;
+}
+
+.article{
+    width: 75%;
+    float: left;
+}
+.comment li{
+    margin-right: 15px;
+    list-style-type: none;
+}
