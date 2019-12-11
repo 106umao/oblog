@@ -17,13 +17,13 @@ import java.util.Map;
  **/
 public class MappingHandler {
     public static Map<String, String> map = null;
-    public static void main(String[] args) throws ClassNotFoundException, URISyntaxException, IOException {
+    public static void init( String packageName) throws ClassNotFoundException, URISyntaxException, IOException {
         map = new HashMap<>();
-        List allPattern = PatternUtils.getAllPattern();
+        List allPattern = PatternUtils.getAllPattern(packageName);
         for(String s:(String[])allPattern.toArray(new String[0])) {
             for (Method m : Class.forName(s).getMethods()) {
                 if (m.getAnnotation(ServiceMapping.class) != null) {
-                    map.put(m.getName(), m.getAnnotation(ServiceMapping.class).toString());
+                    map.put( m.getAnnotation(ServiceMapping.class).toString(),m.getName());
                 }
             }
         }

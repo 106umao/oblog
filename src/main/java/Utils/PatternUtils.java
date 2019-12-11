@@ -18,14 +18,11 @@ import java.util.function.Consumer;
  * @create: 2019-12-11 01:41
  **/
 public class PatternUtils {
-    public static List<String> getAllPattern() throws URISyntaxException, IOException {
+    public static List<String> getAllPattern(String packageName) throws URISyntaxException, IOException {
         String classPath = PatternUtils.class.getResource("/").toString();
         classPath = java.net.URLDecoder.decode(classPath,"utf-8");
         classPath = classPath.substring(classPath.indexOf(':') + 2);
         classPath = classPath.replace('/', '.');
-
-
-        String packageName = "reflect";
         packageName = packageName.replace('.', '/');
         File file = new File(Thread.currentThread().getContextClassLoader().getResource(packageName).toURI());
         FileUtils.visitAllDirsAndFiles(file);
