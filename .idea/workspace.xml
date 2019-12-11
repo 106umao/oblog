@@ -7,40 +7,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="df7f6e01-6bb1-4fad-ab7d-bcb028deed35" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mybatis_mybatis_3_4_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_10.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/ContainerInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Utils/MapperBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ArticleMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/service/ArticleService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/servlet/InitServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pblog_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/pblog_war_exploded.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pblog.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pblog.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/filter/CharacterFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/Reply.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pojo/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/jsp/articledetails.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ArticleServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/ArticleServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/PatternUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/PatternUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/MappingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/reflect/MappingHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/Service.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/getAnnotationInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/proxy/dyanamicProxy/star.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/proxy/dyanamicProxy/Star.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/MappingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/reflect/MappingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/presional_blog.sql" beforeDir="false" afterPath="$PROJECT_DIR$/presional_blog.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Utils/ContainerInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/ContainerInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pojo/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pojo/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/reflect/IService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/MappingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/reflect/MappingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/reflect/ServiceMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Utils/reflect/ServiceMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/service/ArticleService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/service/ArticleService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/InitServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/servlet/InitServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/lib/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/lib/codemirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/clike/clike.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/clike/clike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/rpm/changes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/rpm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/mode/rpm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/modes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/lib/codemirror/modes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/editormd/scss/lib/prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/editormd/scss/lib/prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/IService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/reflect/IService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/MappingHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/reflect/MappingHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/Service.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/reflect/Service.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/ServiceMapping.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/reflect/ServiceMapping.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/reflect/getAnnotationInfo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Utils/reflect/getAnnotationInfo.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Blog/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/ArticleServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/PatternUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/PatternUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/PatternUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/PatternUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/MappingHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/MappingHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/getAnnotationInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ArticleServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/PatternUtils$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/PatternUtils$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Utils/PatternUtils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/PatternUtils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reflect/MappingHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/reflect/MappingHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reflect/Service.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/reflect/getAnnotationInfo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/MappingHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/reflect/MappingHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/ContainerInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/Utils/ContainerInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/pojo/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/pojo/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/MappingHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/reflect/ServiceMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/servlet/InitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/WEB-INF/classes/servlet/InitServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/lib/codemirror.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/lib/codemirror.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/clike/clike.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/clike/clike.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/rpm/changes/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/rpm/changes/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/rpm/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/mode/rpm/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/modes.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/lib/codemirror/modes.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Blog/editormd/scss/lib/prefixes.scss" beforeDir="false" afterPath="$PROJECT_DIR$/target/Blog/editormd/scss/lib/prefixes.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Utils/ContainerInit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Utils/ContainerInit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mybatis-config.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mybatis-config.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pojo/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/pojo/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reflect/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reflect/MappingHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/reflect/ServiceMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/service/ArticleService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/service/ArticleService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/InitServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servlet/InitServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/MappingHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/ServiceMapping.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/reflect/getAnnotationInfo.class" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -60,7 +82,23 @@
     <option name="HIDDEN_KINDS">
       <set />
     </option>
-    <expand />
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="presional_blog@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="presional_blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="presional_blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="presional_blog: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
     <select />
   </component>
   <component name="DefaultGradleProjectSettings">
@@ -69,24 +107,64 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ArticleServlet.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#766#767#0" expanded="true" />
-                <element signature="e#800#801#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlet/InitServlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="305">
-              <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+            <state relative-caret-position="1144">
+              <caret line="58" selection-start-line="58" selection-end-line="58" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/service/ArticleService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="260">
+              <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/html/articledetails.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret selection-end-line="324" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/articledetails.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="377">
+              <caret line="69" column="122" selection-start-line="69" selection-start-column="122" selection-end-line="69" selection-end-column="122" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="910">
+              <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/filter/CharacterFilter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="546">
+              <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -95,44 +173,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Class.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="2111" column="5" lean-forward="true" selection-start-line="2111" selection-start-column="5" selection-end-line="2111" selection-end-column="5" />
+            <state relative-caret-position="104">
+              <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MapperBuilder.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Article.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="129">
-              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#689#690#0" expanded="true" />
-                <element signature="e#743#744#0" expanded="true" />
-                <element signature="e#782#783#0" expanded="true" />
-                <element signature="e#833#834#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/reflect/MappingHandler.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="173">
-              <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Utils/PatternUtils.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            <state relative-caret-position="546">
+              <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -143,34 +196,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/ArticleMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/service/ArticleService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#554#555#0" expanded="true" />
-                <element signature="e#599#600#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/Iterator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+            <state relative-caret-position="104">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -183,6 +210,7 @@
         <option value="AnnotationType" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -210,7 +238,6 @@
         <option value="$PROJECT_DIR$/src/test/java/proxy/dyanamicProxy/Client.java" />
         <option value="$PROJECT_DIR$/src/test/java/reflect/IService.java" />
         <option value="$PROJECT_DIR$/src/test/java/testScriptEnginee/Demo01.java" />
-        <option value="$PROJECT_DIR$/src/test/java/reflect/getAnnotationInfo.java" />
         <option value="$PROJECT_DIR$/src/test/java/reflect/ServiceMapping.java" />
         <option value="$PROJECT_DIR$/src/test/java/reflect/Service.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/FileUtils.java" />
@@ -223,13 +250,23 @@
         <option value="$PROJECT_DIR$/../AddressBookModule/src/main/java/utils/MapperBuilder.java" />
         <option value="$PROJECT_DIR$/src/main/java/Utils/MapperBuilder.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/pojo/Article.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
         <option value="$PROJECT_DIR$/src/main/java/dao/ArticleMapper.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/InitServletStaticProxy.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/ArticleServlet.java" />
+        <option value="$PROJECT_DIR$/presional_blog.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/Article.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/Category.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/Comment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/Reply.java" />
+        <option value="$PROJECT_DIR$/src/main/java/pojo/User.java" />
+        <option value="$PROJECT_DIR$/src/test/java/reflect/getAnnotationInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Utils/reflect/MappingHandler.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/InitServlet.java" />
+        <option value="$PROJECT_DIR$/src/main/java/filter/CharacterFilter.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
+        <option value="$PROJECT_DIR$/src/main/webapp/index.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/service/ArticleService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/articledetails.jsp" />
       </list>
     </option>
   </component>
@@ -298,6 +335,30 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="filter" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="pojo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -320,48 +381,63 @@
               <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
               <item name="pblog" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-              <item name="dyanamicProxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="proxy" type="462c0819:PsiDirectoryNode" />
-              <item name="staticProxy" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pblog" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="Utils" type="462c0819:PsiDirectoryNode" />
               <item name="reflect" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="html" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pblog" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:jstl:1.2" type="70bed36:NamedLibraryElementNode" />
+            </path>
+            <path>
+              <item name="pblog" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="Maven: javax.servlet:jstl:1.2" type="70bed36:NamedLibraryElementNode" />
+              <item name="jstl-1.2.jar" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -375,6 +451,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="database.console.LAST_STATE" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/Utils" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -404,13 +481,13 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.27">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 9.0.21">
     <configuration name="MappingHandler" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reflect.MappingHandler" />
+      <option name="MAIN_CLASS_NAME" value="Utils.reflect.MappingHandler" />
       <module name="pblog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="reflect.*" />
+          <option name="PATTERN" value="Utils.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -419,11 +496,11 @@
       </method>
     </configuration>
     <configuration name="getAnnotationInfo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="reflect.getAnnotationInfo" />
+      <option name="MAIN_CLASS_NAME" value="Utils.reflect.getAnnotationInfo" />
       <module name="pblog" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="reflect.*" />
+          <option name="PATTERN" value="Utils.reflect.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -431,7 +508,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Tomcat 9.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+    <configuration name="Tomcat 9.0.21" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.21" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="pblog:war exploded">
@@ -506,12 +583,12 @@
     <list>
       <item itemvalue="Application.getAnnotationInfo" />
       <item itemvalue="Application.MappingHandler" />
-      <item itemvalue="Tomcat Server.Tomcat 9.0.27" />
+      <item itemvalue="Tomcat Server.Tomcat 9.0.21" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MappingHandler" />
         <item itemvalue="Application.getAnnotationInfo" />
+        <item itemvalue="Application.MappingHandler" />
       </list>
     </recent_temporary>
   </component>
@@ -531,17 +608,19 @@
       <workItem from="1575955986656" duration="1229000" />
       <workItem from="1575969822242" duration="23747000" />
       <workItem from="1576045317037" duration="10560000" />
+      <workItem from="1576062769300" duration="5123000" />
+      <workItem from="1576068053659" duration="582000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="38602000" />
+    <option name="totallyTimeSpent" value="44307000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4954751" visible="true" weight="0.22995952" />
-      <window_info id="Structure" order="1" sideWeight="0.5045249" side_tool="true" weight="0.22995952" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49457702" visible="true" weight="0.23507462" />
+      <window_info id="Structure" order="1" sideWeight="0.505423" side_tool="true" weight="0.23240939" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
       <window_info id="Capture Tool" order="4" />
@@ -549,13 +628,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31152648" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.31127983" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32866043" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3286334" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Statistic" order="10" />
@@ -564,7 +643,8 @@
       <window_info anchor="bottom" id="Version Control" order="13" />
       <window_info anchor="bottom" id="Tail" order="14" />
       <window_info anchor="bottom" id="Application Servers" order="15" weight="0.329718" />
-      <window_info anchor="bottom" id="Messages" order="16" weight="0.32866043" />
+      <window_info anchor="bottom" id="Messages" order="16" weight="0.3286334" />
+      <window_info anchor="bottom" id="Database Console" order="17" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -572,7 +652,7 @@
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Word Book" order="6" side_tool="true" />
-      <window_info anchor="right" id="Database" order="7" weight="0.12473348" />
+      <window_info anchor="right" id="Database" order="7" visible="true" weight="0.12473348" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="right" id="Theme Preview" order="9" />
     </layout>
@@ -581,70 +661,9 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/reflect/AccessibleObject.java" />
-    <entry file="file://$PROJECT_DIR$/src/test/java/proxy/dyanamicProxy/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="15" column="14" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reflect/ServiceMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="10" column="14" lean-forward="true" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reflect/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/proxy/dyanamicProxy/StarHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="28" column="5" lean-forward="true" selection-start-line="28" selection-start-column="5" selection-end-line="28" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#319#320#0" expanded="true" />
-            <element signature="e#358#359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/net/URLConnection.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/net/URL.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/ClassLoader.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/io/File.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/Thread.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/util/function/Consumer.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/CharSequence.java" />
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/Class.java" />
     <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/String.java" />
     <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/util/Iterator.java" />
     <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/util/List.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="22" column="47" lean-forward="true" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/util/ListIterator.java" />
     <entry file="jar://D:/Program Files/Java/jdk-11.0.4/lib/src.zip!/java.base/java/lang/reflect/Method.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/proxy/staticProxy/ProxyStar.java">
@@ -668,7 +687,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reflect/IService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/reflect/IService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="312">
           <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
@@ -685,66 +704,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/getAnnotationInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reflect/MappingHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="32" selection-start-line="32" selection-end-line="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/reflect/getAnnotationInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/Service.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="20" column="5" selection-start-line="9" selection-start-column="4" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#243#244#0" expanded="true" />
-            <element signature="e#304#305#0" expanded="true" />
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#410#411#0" expanded="true" />
-            <element signature="e#455#456#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Service.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/getAnnotationInfo.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/Service.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/annotation/WebServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="21" column="20" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/ServiceMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -755,13 +721,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="20" selection-start-column="20" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet.java" />
     <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpServlet.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="108">
@@ -769,16 +729,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/IService.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/reflect/IService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="10" column="27" selection-start-line="10" selection-start-column="27" selection-end-line="10" selection-end-column="27" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojo.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo.java" />
     <entry file="file://$PROJECT_DIR$/../AddressBookModule/src/main/java/utils/MapperBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
@@ -786,122 +744,92 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/Iterator.java" />
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/String.java" />
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/jdk/internal/reflect/MethodAccessor.java" />
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/reflect/Method.java" />
+    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Class.java" />
+    <entry file="file://$PROJECT_DIR$/presional_blog.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="292">
-          <caret line="54" column="21" selection-start-line="54" selection-start-column="21" selection-end-line="54" selection-end-column="21" />
+        <state relative-caret-position="234">
+          <caret line="9" column="28" lean-forward="true" selection-start-line="9" selection-start-column="28" selection-end-line="9" selection-end-column="28" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+    <entry file="das://f1838f27-daef-442d-bc96-13e27ba30489/schema/presional_blog/table/blog_article">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state projectRestartId="de1ff5fb-0e45-426b-9c79-5ac45deee49a">
+          <filtering>
+            <filter text="" />
+          </filtering>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ContainerInit.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Category.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="21" column="28" selection-start-line="21" selection-start-column="28" selection-end-line="21" selection-end-column="28" />
+        <state relative-caret-position="416">
+          <caret line="16" column="27" selection-start-line="16" selection-start-column="27" selection-end-line="16" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/reflect/MappingHandler.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Comment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="572">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ArticleMapper.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Reply.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="32" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+        <state relative-caret-position="416">
+          <caret line="16" column="18" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MapperBuilder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="129">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        <state relative-caret-position="364">
+          <caret line="14" column="19" selection-start-line="14" selection-start-column="19" selection-end-line="14" selection-end-column="19" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#689#690#0" expanded="true" />
-            <element signature="e#743#744#0" expanded="true" />
-            <element signature="e#782#783#0" expanded="true" />
-            <element signature="e#833#834#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/util/Iterator.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/reflect/Service.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="137">
-          <caret line="124" column="19" selection-start-line="124" selection-start-column="19" selection-end-line="124" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ArticleServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="26" column="8" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        <state relative-caret-position="260">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#766#767#0" expanded="true" />
-            <element signature="e#800#801#0" expanded="true" />
+            <element signature="e#195#196#0" expanded="true" />
+            <element signature="e#243#244#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/jdk/internal/reflect/MethodAccessor.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/reflect/getAnnotationInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="37" column="51" lean-forward="true" selection-start-line="37" selection-start-column="51" selection-end-line="37" selection-end-column="51" />
+        <state relative-caret-position="259">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/reflect/Method.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/FileUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="564" column="9" lean-forward="true" selection-start-line="564" selection-start-column="9" selection-end-line="564" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/Program Files/Java/jdk-11.0.3/lib/src.zip!/java.base/java/lang/Class.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="2111" column="5" lean-forward="true" selection-start-line="2111" selection-start-column="5" selection-end-line="2111" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/InitServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="305">
-          <caret line="61" column="28" lean-forward="true" selection-start-line="61" selection-start-column="28" selection-end-line="61" selection-end-column="28" />
+        <state relative-caret-position="410">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -910,23 +838,152 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Utils/PatternUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="741">
+          <caret line="36" column="21" selection-start-line="36" selection-start-column="21" selection-end-line="36" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/service/ArticleService.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/Utils/reflect/MappingHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="18" column="40" lean-forward="true" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="203">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#554#555#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/MapperBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="572">
+          <caret line="28" column="35" selection-start-line="28" selection-start-column="35" selection-end-line="28" selection-end-column="35" />
+          <folding>
+            <element signature="e#689#690#0" expanded="true" />
+            <element signature="e#743#744#0" expanded="true" />
+            <element signature="e#782#783#0" expanded="true" />
+            <element signature="e#833#834#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/reflect/ServiceMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/ContainerInit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/ArticleServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Utils/reflect/MappingHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="481">
+          <caret line="38" column="36" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/http/HttpFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="14" column="22" selection-start-line="14" selection-start-column="22" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/javax/servlet/annotation/WebFilter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="411">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/InitServlet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1144">
+          <caret line="58" selection-start-line="58" selection-end-line="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/service/ArticleService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="20" column="78" selection-start-line="20" selection-start-column="78" selection-end-line="20" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="10" column="16" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/articledetails.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="324" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="910">
+          <caret line="35" column="36" selection-start-line="35" selection-start-column="36" selection-end-line="35" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/filter/CharacterFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="54" selection-start-line="21" selection-start-column="54" selection-end-line="21" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="4" column="15" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/pojo/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="546">
+          <caret line="21" column="25" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/ArticleMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/articledetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="377">
+          <caret line="69" column="122" selection-start-line="69" selection-start-column="122" selection-end-line="69" selection-end-column="122" />
         </state>
       </provider>
     </entry>

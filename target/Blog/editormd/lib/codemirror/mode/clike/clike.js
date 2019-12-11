@@ -422,7 +422,7 @@ CodeMirror.defineMode("clike", function(config, parserConfig) {
                     "pow exp log exp2 sqrt inversesqrt " +
                     "abs sign floor ceil fract mod min max clamp mix step smoothstep " +
                     "length distance dot cross normalize ftransform faceforward " +
-                    "reflect refract matrixCompMult " +
+                    "Utils.reflect refract matrixCompMult " +
                     "lessThan lessThanEqual greaterThan greaterThanEqual " +
                     "equal notEqual any all not " +
                     "texture1D texture1DProj texture1DLod texture1DProjLod " +

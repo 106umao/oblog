@@ -1,6 +1,6 @@
 package servlet;
 
-import reflect.MappingHandler;
+import Utils.reflect.MappingHandler;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -52,12 +52,11 @@ public class InitServlet extends HttpServlet {
 
     @lombok.SneakyThrows
     public void analysisInvoke(String reqPattern,HttpServletRequest req, HttpServletResponse resp) {
-        Object result = null;
         Set set = patternMap.keySet();
         Iterator iterator = set.iterator();
         while (iterator.hasNext()) {
             String s = (String) iterator.next();
-            if (s.contains(reqPattern)) {
+            if (s.equals(reqPattern)) {
                 System.out.println(((String) patternMap.get(s)) + "方法开始调用");
                 aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class).invoke(aClass.newInstance(), req, resp);
                 System.out.println(((String) patternMap.get(s)) + "方法调用完成");

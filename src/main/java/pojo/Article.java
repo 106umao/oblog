@@ -10,12 +10,14 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Article {
-    private int article;
+    private int articleId;
     private int categoryId;
     private int userId;
+    private int star;
     private String title;
     private String content;
-    private Date pubdate;
-    private int clicks;
-    private String image;
+    private Date releaseTime;
+    private Date lastModified;
+    private String cover;
+    private int isDelete;
 }

@@ -350,7 +350,7 @@
             box-sizing: $value; 
 }
 
-// box-reflect
+// box-Utils.reflect
 
 @mixin box-reflect($value) {
     -webkit-box-reflect: $value; /* Chrome, Safari, iOS, Blackberry */

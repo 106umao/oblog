@@ -5626,7 +5626,7 @@
   // This is a kludge to keep keymaps mostly working as raw objects
   // (backwards compatibility) while at the same time support features
   // like normalization and multi-stroke key bindings. It compiles a
-  // new normalized keymap, and then updates the old object to reflect
+  // new normalized keymap, and then updates the old object to Utils.reflect
   // this.
   CodeMirror.normalizeKeyMap = function(keymap) {
     var copy = {};
