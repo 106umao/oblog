@@ -52,15 +52,21 @@ public class InitServlet extends HttpServlet {
 
     @lombok.SneakyThrows
     public void analysisInvoke(String reqPattern,HttpServletRequest req, HttpServletResponse resp) {
+        boolean isMatch = false;
         Set set = patternMap.keySet();
         Iterator iterator = set.iterator();
         while (iterator.hasNext()) {
             String s = (String) iterator.next();
             if (s.equals(reqPattern)) {
+                System.out.println(reqPattern+"匹配成功");
+                isMatch = true;
                 System.out.println(((String) patternMap.get(s)) + "方法开始调用");
                 aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class).invoke(aClass.newInstance(), req, resp);
                 System.out.println(((String) patternMap.get(s)) + "方法调用完成");
             }
+        }
+        if (!isMatch) {
+            resp.sendError(404,"资源服务器未能匹配到您的请求");
         }
     }
 }

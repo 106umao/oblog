@@ -1138,7 +1138,7 @@
       <Comment>回复表</Comment>
     </table>
     <table id="289" parent="8" name="blog_user"/>
-    <column id="290" parent="285" name="id">
+    <column id="290" parent="285" name="article_id">
       <Position>1</Position>
       <Comment>文章id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1173,7 +1173,7 @@
     </column>
     <column id="295" parent="285" name="content">
       <Position>6</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>text|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
@@ -1207,10 +1207,10 @@
     </column>
     <key id="300" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>article_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="301" parent="286" name="id">
+    <column id="301" parent="286" name="category_id">
       <Position>1</Position>
       <Comment>文章类别id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1227,10 +1227,10 @@
     </column>
     <key id="303" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>category_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="287" name="id">
+    <column id="304" parent="287" name="comment_id">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1279,10 +1279,10 @@
     </column>
     <key id="311" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>comment_id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="312" parent="288" name="id">
+    <column id="312" parent="288" name="reply_id">
       <Position>1</Position>
       <DataType>varchar(50)|0s</DataType>
       <NotNull>1</NotNull>
@@ -1336,16 +1336,16 @@
     </index>
     <key id="320" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>reply_id</ColNames>
       <Primary>1</Primary>
     </key>
     <foreign-key id="321" parent="288" name="reply_fk1">
       <ColNames>comment_id</ColNames>
       <RefSchemaName>presional_blog</RefSchemaName>
       <RefTableName>blog_comment</RefTableName>
-      <RefColNames>id</RefColNames>
+      <RefColNames>comment_id</RefColNames>
     </foreign-key>
-    <column id="322" parent="289" name="id">
+    <column id="322" parent="289" name="user_id">
       <Position>1</Position>
       <Comment>用户id</Comment>
       <DataType>int(11)|0s</DataType>
@@ -1404,7 +1404,7 @@
     </column>
     <key id="330" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
+      <ColNames>user_id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>
