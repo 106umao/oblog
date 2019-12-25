@@ -87,12 +87,12 @@
                 </c:if>
             </ul>
             <ul>
-                <form class="navbar-form navbar-left " role="search">
+                <form class="navbar-form navbar-left " action="article/articleList" role="search">
                     <div class="form-group input-group input-group-sm">
                                       <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
                                           <span style="background: white;" class="glyphicon glyphicon-search"></span>
                                       </span>
-                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
+                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" name="keyWord" type="text" class="form-control" placeholder="search article for key">
                         <!-- <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" value="Submit"></button>
                         </span> -->
@@ -164,7 +164,6 @@
                 location.reload();
             }
         });
-
     }
 </script>
 

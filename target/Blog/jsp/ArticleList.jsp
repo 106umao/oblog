@@ -86,12 +86,12 @@
                 </c:if>
             </ul>
             <ul>
-                <form class="navbar-form navbar-left " role="search">
+                <form class="navbar-form navbar-left " action="article/articleList" role="search">
                     <div class="form-group input-group input-group-sm">
                                       <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
                                           <span style="background: white;" class="glyphicon glyphicon-search"></span>
                                       </span>
-                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
+                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" name="keyWord" type="text" class="form-control" placeholder="search article for key">
                         <!-- <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" value="Submit"></button>
                         </span> -->
@@ -103,106 +103,26 @@
 </nav>
 <div  class="container">
     <div  class="list-group " style="box-shadow: 15px 10px 30px rgb(0, 60, 100); float:left ;width: 60%;" >
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>大帅逼</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Morbi leo risus</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Morbi leo risus</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Porta ac consectetur a</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Vestibulum at eros</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Vestibulum at eros</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Vestibulum at eros</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Vestibulum at eros</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-        <a href="#" class="list-group-item">
-            <h3 class="list-group-item-heading"> article title</h3>
-            <p class="content">content</p>
-            <ul class="clearfix list_userbar">
-                <li style="float: left;"><img style="width: 30px;height: 30px;" src="image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></li>
-                <li style="float: left;"><p>Vestibulum at eros</p></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up"></span></li>
-                <li style="float: right;"><span class="glyphicon glyphicon-comment"></span></li>
-            </ul>
-        </a>
-
+        <c:forEach var="article" items="${articleList}">
+            <a href="article/articleDetails?articleId=${article.articleId}" class="list-group-item">
+                <h3 class="list-group-item-heading">${article.title}</h3>
+                <p class="content">${article.introduction}</p>
+                <ul class="clearfix list_userbar">
+                    <li style="float: left;"><img style="width: 30px;height: 30px;" src="image/${article.avatar}" class="avatar img-circle" alt="头像"/></li>
+                    <li style="float: left;"><p>${article.username}</p></li>
+                    <li style="float: right;"><span class="glyphicon glyphicon-thumbs-up">${article.star}</span></li>
+                    <li style="float: right;"><span class="glyphicon glyphicon-comment">${article.msgCount}</span></li>
+                </ul>
+            </a>
+        </c:forEach>
     </div>
     <div style="float: right;width: 30%;position:sticky;top:  30px;">
         <div style="float:right;width: 100%;" class="">
             <ul class="nav nav-pills nav-stacked">
                 <li class="active"><h3 class="text-center text-info"><span class="glyphicon glyphicon-tag"></span>分类</h3></li>
-                <li><a href="#">Tutorials <span class="badge">14</span></a></li>
-                <li><a href="#">Practice Editor <span class="badge">99+</span></a></li>
-                <li><a href="#">Gallery <span class="badge">7</span></a></li>
-                <li><a href="#">Contact <span class="badge">11</span></a></li>
+                <c:forEach items="${categories}" var="category">
+                    <li><a href="article/articleList?categoryId=${category.categoryId}">${category.categoryName}<span class="badge">${category.articleCount}</span></a></li>
+                </c:forEach>
             </ul>
         </div>
         <div style="float: right;" class="tags btn-group-xs">

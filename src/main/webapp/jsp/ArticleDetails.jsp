@@ -17,9 +17,9 @@
 <head>
     <base href="${basePath}">
     <title>往事随风 轻舞飞扬</title>
-    <link rel="stylesheet" href="../css/customer.css">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../editormd/css/editormd.preview.css">
+    <link rel="stylesheet" href="css/customer.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="editormd/css/editormd.preview.css">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -40,7 +40,7 @@
                 </c:if>
                 <c:if test="${loginUser==null}">
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                        <button id="loginDownBtn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
                             登录
                         </button>
                     </li>
@@ -102,148 +102,56 @@
         </div>
     </div>
 </nav>
-    <div class="container">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="#"><img src="image/下载.png"/></a>
-        </div>
-        <div>
-            <ul class="nav navbar-nav navbar-left">
-                <li><a href="">首页</a></li>
-                <li><a href="jsp/ArticleList.jsp">文章</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <c:if test="${loginUser!=null}">
-                    <li><img src="image/${loginUser.avatar}" class="avatar img-circle" alt="头像"/></li>
-                    <li><a href="#">我的消息 <span class="badge">14</span></a></li>
-                    <li><button onclick="logout()" class="btn btn-default"><span class="glyphicon glyphicon-off">退出登录</span></button></li>
-                </c:if>
-                <c:if test="${loginUser==null}">
-                    <li>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                            登录
-                        </button>
-                    </li>
-                    <!-- Modal -->
-                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                    <h4 class="text-center modal-title" id="myModalLabel">欢迎登录</h4>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="form-horizontal">
-                                        <div class="form-group">
 
-                                            <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username:</label>
-                                            <div class="col-sm-4 input-group">
-                                                <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                                <input type="text" name="username" class="form-control" id="username" placeholder="username">
-                                            </div>
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="inputPassword" class="col-sm-offset-3 col-sm-2 control-label">Password:</label>
-                                            <div class="col-sm-4 input-group">
-                                                <span class="input-group-addon"><span class="glyphicon glyphicon-ice-lolly"></span></span>
-                                                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="password">
-                                            </div>
-                                            <p id="loginmsg"></p>
-                                        </div>
-                                        <div class="form-group">
-                                            <div class="col-sm-offset-5 col-sm-6">
-                                                <button id="loginBtn" onclick="login()" class="btn btn-primary">Sign in</button>
-                                                <label>
-                                                    <a href="jsp/Register.jsp">Register Count</a>
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                </c:if>
-            </ul>
-            <ul>
-                <form class="navbar-form navbar-left " role="search">
-                    <div class="form-group input-group input-group-sm">
-                                      <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
-                                          <span style="background: white;" class="glyphicon glyphicon-search"></span>
-                                      </span>
-                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
-                        <!-- <span class="input-group-btn">
-                            <button type="submit" class="btn btn-default" value="Submit"></button>
-                        </span> -->
-                    </div>
-                </form>
-            </ul>
-        </div>
-    </div>
-</nav>
 <div  class="container">
     <div class="article">
         <div class="page-header">
-            <h3><c:forEach var="article" items="${articleList}">
-                ${article.title}
-            </c:forEach></h3>
+            <h3>${article.title}</h3>
             <ul class="btn-group btn-group-xs" style="list-style-type: none;">
-                <li class="text-info" style="margin:0 10px;float: left;">发布时间：<c:forEach var="article" items="${articleList}">
-                    ${article.releaseTime}
-                </c:forEach></li>
-                <li style="float: left;margin:0 10px;">作者：<a href="#">猹与少年</a></li>
-                <li style="float: left;margin:0 10px;"><span class="glyphicon glyphicon-thumbs-up"> 0</span></li>
+                <li class="text-info" style="margin:0 10px;float: left;">发布时间：${article.releaseTime}</li>
+                <li style="float: left;margin:0 10px;">作者：<a href="#">${author.username}</a></li>
+                <li style="float: left;margin:0 10px;"><a href="article/starArticle?articleId=${article.articleId}"><span class="glyphicon glyphicon-thumbs-up"></span></a> ${article.star}</li>
                 <li style="float: left;margin:0 12px;">文章标签：</li>
-
-                <button style="margin-right: 5px;" type="button" class="btn btn-default">Cras justo odio</button>
-                <button style="margin-right: 5px;" type="button" class="btn btn-default">Dapibus ac facilisis in </button>
+                <button style="margin-right: 5px;" type="button" class="btn btn-default">编程</button>
+                <button style="margin-right: 5px;" type="button" class="btn btn-default">Web</button>
                 <li style="float: left;margin:0 3px;"><a href="#">更多</a></li>
             </ul>
         </div>
         <div id="doc-content">
-                        <textarea style="display:none;"><c:forEach var="article" items="${articleList}">${article.content}</c:forEach></textarea>
+                        <textarea style="display:none;">${article.content}</textarea>
         </div>
         <div class="comment">
             <div class="panel panel-default">
                 <div class="panel-body">
                     <ul class="clearfix">
-                        <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
-                        <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
-                        <li style="float: left;position: relative;top: 6px;">1秒前</li>
-                        <li style="float: left;position: relative;top: 6px;">#1楼</li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
-                        <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
+                        <textarea id="commentFrame" onload="commentBlur()" class="form-control" onblur="commentBlur()" onfocus="commentFocus()" rows="4" placeholder="想对作者说点什么"></textarea>
+                        <c:if test="${loginUser!=null}">
+                            <button class="btn btn-danger pull-right" style=" margin-top:10px;display: none" id="submitComment" onclick="submitComment()">发表评论</button>
+                        </c:if>
+                        <c:if test="${loginUser==null}">
+                            <button disabled class="btn btn-danger pull-right" style=" margin-top:10px;display: none" id="submitComment" onclick="submitComment()">登陆后评论</button>
+                        </c:if>
                     </ul>
-                    <p style="margin: 5px 12px 5px 80px;" class="pull-left">如果你使用图标是为了表达某些含义（不仅仅是为了装饰用），请确保你所要表达的意思能够通过被辅助设备识别，例如，包含额外的内容并通过 .sr-only 类让你应当提供其他的内容来表示这个控件的意图，这样就能让使用辅助设备的用户知道其作用了。这种情况下，你可以为控件添加 aria-label 属性。</p>
                 </div>
-                <div class="panel-body">
-                    <ul class="clearfix">
-                        <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
-                        <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
-                        <li style="float: left;position: relative;top: 6px;">1秒前</li>
-                        <li style="float: left;position: relative;top: 6px;">#1楼</li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
-                        <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
-                    </ul>
-                    <p style="margin: 5px 12px 5px 80px" class="pull-left ">过 .</p>
-                </div>
-                <div class="panel-body">
-                    <ul class="clearfix">
-                        <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
-                        <li style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
-                        <li style="float: left;position: relative;top: 6px;">1秒前</li>
-                        <li style="float: left;position: relative;top: 6px;">#1楼</li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#"><span class="glyphicon glyphicon-star"> 0</span></a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
-                        <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
-                        <li style="float: right;;position: relative;top: 6px;"><a href="#">删除</a></li>
-                    </ul>
-                    <p style="margin: 5px 12px 5px 80px;" class="pull-left">如果你使用图标是为了表达某些含义（不仅仅是为了装饰用），请确保你所要表达的意思能够通过被辅助设备识别，例如，包含额外的内容并通过 .sr-only 类让你应当提供其他的内容来表示这个控件的意图，这样就能让使用辅助设备的用户知道其作用了。这种情况下，你可以为控件添加 aria-label 属性。</p>
-                </div>
+                <c:forEach var="comment" items="${commentList}" varStatus="c">
+                    <div class="panel-body">
+                        <ul class="clearfix">
+                            <li style="float: left;margin:0 5px;"><a href="#"><img style="width: 30px;height: 30px;" src="image/${comment.commentUser.avatar}" class="avatar img-circle" alt="头像"/></a></li>
+                            <li style="float: left;position: relative;top: 6px;"><a href="#">${comment.commentUser.username}</a></li>
+                            <li style="float: left;position: relative;top: 6px;">${comment.createDate}</li>
+                            <li style="float: left;position: relative;top: 6px;">#${c.count}楼</li>
+                            <li style="float: right;position: relative;top: 6px;"><a href="comment/starComment?commentId=${comment.commentId}&articleId=${article.articleId}"><span class="glyphicon glyphicon-star"></span></a> ${comment.zanCount}</li>
+                            <c:if test="${loginUser!=null}">
+                                <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
+                            </c:if>
+                            <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
+                            <c:if test="${loginUser.userId==author.userId}">
+                                <li style="float: right;;position: relative;top: 6px;"><a href="comment/delete?commentId=${comment.commentId}&articleId=${article.articleId}">删除</a></li>
+                            </c:if>
+                        </ul>
+                        <p style="margin: 5px 12px 5px 80px;" class="pull-left">${comment.replyMsg}</p>
+                    </div>
+                </c:forEach>
             </div>
 
         </div>
@@ -251,20 +159,22 @@
     <div class="sideright" style="float: right;width: 20%;position:sticky;top:  30px;">
         <div class="authorinfo" style="float: left;">
             <ul class=" list_userbar">
-                <li style="float: left;"><a href="#"><img style="width: 30px;height: 30px;" src="../image//30a09f391c274bfd8cc6091ae0fc5058!400x400.jpeg" class="avatar img-circle" alt="头像"/></a></li>
-                <li class="clearfix" style="float: left;position: relative;top: 6px;"><a href="#">Vestibulum at eros</a></li>
+                <li style="float: left;"><a href="#"><img style="width: 30px;height: 30px;" src="image/${author.avatar}" class="avatar img-circle" alt="头像"/></a></li>
+                <li class="clearfix" style="float: left;position: relative;top: 6px;"><a href="#">${author.username}</a></li>
                 <p style="margin-top: 10px;clear: left;" class="text-lef text-info">关于作者：</p>
-            <li style="float: left;"><p>作者详细信息只要给 .btn-group 加上 .btn-group-* 类，就省去为按钮组中的每个按钮都赋予尺寸类了，如果包含了多个按钮组时也适用。
-        </p></li>
+            <li style="float: left;">
+                <p>
+                    ${author.about}
+                </p>
+            </li>
             </ul>
         </div>
         <div class="newarticle" style="float: left;">
             <ul class="nav nav-pills nav-stacked">
                 <li class=""><h4 class="text-center text-info">最新文章</h4></li>
-                <li><a href="#">Tutorials <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
-                <li><a href="#">Practice Editor<span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
-                <li><a href="#">Gallery <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
-                <li><a href="#">Contact <span class="glyphicon glyphicon-thumbs-up"> 0 </span></a></li>
+                <c:forEach items="${latestArticles}" var="larticle">
+                    <li><a href="article/articleDetails?articleId=${larticle.articleId}">${larticle.title}<span class="glyphicon glyphicon-thumbs-up"> ${larticle.star} </span></a></li>
+                </c:forEach>
             </ul>
         </div>
         <div class="newcomment" style="float: left;">
@@ -273,16 +183,16 @@
     </div>
 </div>
 </body>
-<script src="../js/jquery.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../editormd/lib/marked.min.js"></script>
-<script src="../editormd/lib/prettify.min.js"></script>
-<script src="../editormd/lib/raphael.min.js"></script>
-<script src="../editormd/lib/underscore.min.js"></script>
-<script src="../editormd/lib/sequence-diagram.min.js"></script>
-<script src="../editormd/lib/flowchart.min.js"></script>
-<script src="../editormd/lib/jquery.flowchart.min.js"></script>
-<script src="../editormd/editormd.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="editormd/lib/marked.min.js"></script>
+<script src="editormd/lib/prettify.min.js"></script>
+<script src="editormd/lib/raphael.min.js"></script>
+<script src="editormd/lib/underscore.min.js"></script>
+<script src="editormd/lib/sequence-diagram.min.js"></script>
+<script src="editormd/lib/flowchart.min.js"></script>
+<script src="editormd/lib/jquery.flowchart.min.js"></script>
+<script src="editormd/editormd.min.js"></script>
 <script type="text/javascript">
     var testEditor;
     $(function () {
@@ -298,6 +208,32 @@
         })})
 </script>
 <script>
+    function submitComment() {
+        $("#submitComment").css("display","block");
+        $.post(
+            "${basePath}comment/submitComment",
+            {
+                articleId:${article.articleId},
+                replyMsg: $("#commentFrame").val()
+            },
+            function (json) {
+                if (json.status == 200) {
+                    location.reload();
+                }else if (json.status == 400) {
+                    $("#loginDownBtn").trigger("click");
+                }else{
+                    alert("服务器繁忙");
+                }
+            }
+            )
+
+    }
+    function commentFocus() {
+        $("#submitComment").slideDown("fast");
+    }
+    function commentBlur(flag) {
+        $("#submitComment").slideUp("fast");
+    }
     function login() {
         var url = "${basePath}user/login";
         var data = {
@@ -321,7 +257,6 @@
                 location.reload();
             }
         });
-
     }
 </script>
 </html>

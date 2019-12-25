@@ -19,8 +19,8 @@ public class ArticleListEntity {
     private int articleId;
     private int star;
     private String title;
-    private String content;
+    private String introduction;
     private String avatar;
     private String username;
-    private int commentCount;
+    private int msgCount;
 }

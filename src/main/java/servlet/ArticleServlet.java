@@ -19,8 +19,4 @@ public class ArticleServlet extends InitServlet {
         setServiceName(serviceName);
     }
 
-    @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        analysisInvoke(parseRequestPath(req, resp),req,resp);
-    }
 }

@@ -15,5 +15,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Category {
     private int categoryId;
-    private int categoryName;
+    private String categoryName;
+    private int isDelete;
+
 }

@@ -16,6 +16,7 @@ public class Article {
     private int star;
     private String title;
     private String content;
+    private String introduction;
     private Date releaseTime;
     private Date lastModified;
     private String cover;

@@ -29,7 +29,7 @@
         <div>
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="">首页</a></li>
-                <li><a href="jsp/ArticleList.jsp">文章</a></li>
+                <li><a href="article/articleList">文章</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${loginUser!=null}">
@@ -86,12 +86,12 @@
                 </c:if>
             </ul>
             <ul>
-                <form class="navbar-form navbar-left " role="search">
+                <form class="navbar-form navbar-left " action="article/articleList" role="search">
                     <div class="form-group input-group input-group-sm">
                                       <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
                                           <span style="background: white;" class="glyphicon glyphicon-search"></span>
                                       </span>
-                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
+                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" name="keyWord" type="text" class="form-control" placeholder="search article for key">
                         <!-- <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" value="Submit"></button>
                         </span> -->
@@ -105,7 +105,7 @@
     <div class="jumbotron"  style="box-shadow: 15px 10px 30px rgb(0, 60, 100);">
         <h1>Welcome You！</h1>
         <p>欢迎来到我的小窝，在这里我会和你分享我学习和生活中的点点滴滴</p>
-        <p><a class="btn btn-primary btn-lg" href="jsp/ArticleList.jsp" role="button">了解更多</a></p>
+        <p><a class="btn btn-primary btn-lg" href="article/articleList" role="button">了解更多</a></p>
     </div>
 </div>
 </body>
