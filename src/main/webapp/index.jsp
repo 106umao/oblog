@@ -39,8 +39,8 @@
                 </c:if>
                 <c:if test="${loginUser==null}">
                     <li>
-                        <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-                        登录
+                        <button id="loginDownBtn" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                            登录
                         </button>
                     </li>
                     <!-- Modal -->
@@ -86,7 +86,7 @@
                 </c:if>
             </ul>
             <ul>
-                <form class="navbar-form navbar-left " action="article/articleList" role="search">
+                <form action="article/articleList" class="navbar-form navbar-left " role="search">
                     <div class="form-group input-group input-group-sm">
                                       <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
                                           <span style="background: white;" class="glyphicon glyphicon-search"></span>
@@ -101,6 +101,7 @@
         </div>
     </div>
 </nav>
+
 <div style="margin-top:200px;" class="container">
     <div class="jumbotron"  style="box-shadow: 15px 10px 30px rgb(0, 60, 100);">
         <h1>Welcome You！</h1>

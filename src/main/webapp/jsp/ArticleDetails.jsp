@@ -30,7 +30,7 @@
         <div>
             <ul class="nav navbar-nav navbar-left">
                 <li><a href="">首页</a></li>
-                <li><a href="jsp/ArticleList.jsp">文章</a></li>
+                <li><a href="article/articleList">文章</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${loginUser!=null}">
@@ -87,12 +87,12 @@
                 </c:if>
             </ul>
             <ul>
-                <form class="navbar-form navbar-left " role="search">
+                <form action="article/articleList" class="navbar-form navbar-left " role="search">
                     <div class="form-group input-group input-group-sm">
                                       <span style="background: white;border-top-left-radius: 15px;border-bottom-left-radius: 15px;border-right: 0px;" class="input-group-addon">
                                           <span style="background: white;" class="glyphicon glyphicon-search"></span>
                                       </span>
-                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" type="text" class="form-control" placeholder="search article for key">
+                        <input style="border-top-right-radius: 15px;border-bottom-right-radius: 15px;border-left: 0px;" name="keyWord" type="text" class="form-control" placeholder="search article for key">
                         <!-- <span class="input-group-btn">
                             <button type="submit" class="btn btn-default" value="Submit"></button>
                         </span> -->
@@ -142,14 +142,36 @@
                             <li style="float: left;position: relative;top: 6px;">#${c.count}楼</li>
                             <li style="float: right;position: relative;top: 6px;"><a href="comment/starComment?commentId=${comment.commentId}&articleId=${article.articleId}"><span class="glyphicon glyphicon-star"></span></a> ${comment.zanCount}</li>
                             <c:if test="${loginUser!=null}">
-                                <li style="float: right;position: relative;top: 6px;"><a href="#">回复</a></li>
+                                <li style="float: right;position: relative;top: 6px;"><p onclick="alert('sadfadddddddddddd')" id="loginDownBtn" data-toggle="modal" data-target="#myModal">回复</p></li>
                             </c:if>
                             <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
                             <c:if test="${loginUser.userId==author.userId}">
                                 <li style="float: right;;position: relative;top: 6px;"><a href="comment/delete?commentId=${comment.commentId}&articleId=${article.articleId}">删除</a></li>
                             </c:if>
                         </ul>
-                        <p style="margin: 5px 12px 5px 80px;" class="pull-left">${comment.replyMsg}</p>
+                        <div class="clearfix"><p style="margin: 5px 12px 5px 80px;" class=" pull-left">${comment.replyMsg}</p></div>
+                        <p id="downBtn${c.index}" onclick="function downComment() {
+                            $('#replyCommentList${c.index}').slideDown('fast');
+                            $('#downBtn${c.index}').css('display','none');
+                            $('#upBtn${c.index}').css('display','block');
+                        }
+                        downComment()" style="cursor: hand;" class="text-info text-center">展开回复<span class="glyphicon glyphicon-menu-down"></span></p>
+                        <p id="upBtn${c.index}" onclick="function upComment() {
+                            $('#replyCommentList${c.index}').slideUp('fast');
+                             $('#upBtn${c.index}').css('display','none');
+                            $('#downBtn${c.index}').css('display','block');
+                        }
+                        upComment()" style="display:none;cursor: hand;" class="text-info text-center">收起回复<span class="glyphicon glyphicon-menu-up"></span></p>
+                        <div class="list-group" id="replyCommentList${c.index}" style="display: none">
+                            <a href="#" class="list-group-item ">
+                                Cras justo odio
+                            </a>
+                            <a href="#" class="list-group-item">张三  回复  李四：Dapibus ac facilisis in</a>
+                            <a href="#" class="list-group-item">张三  回复  李四：Morbi leo risus</a>
+                            <a href="#" class="list-group-item">张三  回复  李四：Porta ac consectetur ac</a>
+                            <a href="#" class="list-group-item">张三  回复  李四：Vestibulum at eros</a>
+                        </div>
+
                     </div>
                 </c:forEach>
             </div>

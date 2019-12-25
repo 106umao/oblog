@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../editormd/css/editormd.css">
+</head>
+<body>
+    <div class="container">
+        <form th:action="showtext" method="post" enctype="multipart/form-data">
+            <div id="my-editormd" >
+                <textarea id="my-editormd-markdown-doc" name="my-editormd-markdown-doc" style="display:none;"></textarea>
+            </div>
+            <input type="submit" value="提交"/>
+        </form>
+     
+    </div>
+</body>
+
+<script src="../js/jquery.min.js"></script>
+<script src="../editormd/editormd.min.js"></script>
+<script type="text/javascript">
+    $(function() {
+        editormd("my-editormd", {//注意1：这里的就是上面的DIV的id属性值
+            width   : "90%",
+            height  : 640,
+            syncScrolling : "single",
+            path    : "../editormd/lib/",//注意2：你的路径
+            saveHTMLToTextarea : true,//注意3：这个配置，方便post提交表单
+
+            /**上传图片相关配置如下*/
+            imageUpload : true,
+            imageFormats : ["jpg", "jpeg", "gif", "png", "bmp", "webp"],
+            imageUploadURL : "[[../uploadimg}]]",//注意你后端的上传图片服务地址
+        });
+    });
+</script>
+</html>
