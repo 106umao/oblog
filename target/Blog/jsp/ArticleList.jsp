@@ -84,6 +84,9 @@
                         </div>
                     </div>
                 </c:if>
+
+
+
             </ul>
             <ul>
                 <form action="article/articleList" class="navbar-form navbar-left " role="search">

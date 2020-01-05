@@ -142,7 +142,24 @@
                             <li style="float: left;position: relative;top: 6px;">#${c.count}楼</li>
                             <li style="float: right;position: relative;top: 6px;"><a href="comment/starComment?commentId=${comment.commentId}&articleId=${article.articleId}"><span class="glyphicon glyphicon-star"></span></a> ${comment.zanCount}</li>
                             <c:if test="${loginUser!=null}">
-                                <li style="float: right;position: relative;top: 6px;"><p onclick="alert('sadfadddddddddddd')" id="loginDownBtn" data-toggle="modal" data-target="#myModal">回复</p></li>
+                                <li style="float: right;position: relative;top: 6px;"><a href="#" data-toggle="modal" data-target="#replyModel${c.index}">回复</a></li>
+                                <!-- 回复模态框（Modal） -->
+                                <div class="modal fade" id="replyModel${c.index}" tabindex="-1" role="dialog" aria-labelledby="replyTitle${c.index}" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                <h4 class="modal-title" id="replyTitle${c.index}">正在回复&nbsp;<span class="text-info">${comment.commentUser.username}</span></h4>
+                                            </div>
+                                            <div class="modal-body">
+                                                <textarea id="replyComment${c.index}" class="form-control" rows="3" placeholder="你想对 ${comment.commentUser.username} 说："></textarea>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-primary" onclick="submitReply('${comment.commentUser.userId}','${loginUser.userId}','${comment.commentId}','${c.index}')">回复</button>
+                                            </div>
+                                        </div><!-- /.modal-content -->
+                                    </div><!-- /.modal -->
+                                </div>
                             </c:if>
                             <li style="float: right;position: relative;top: 6px;"><a href="#">举报</a></li>
                             <c:if test="${loginUser.userId==author.userId}">
@@ -150,12 +167,17 @@
                             </c:if>
                         </ul>
                         <div class="clearfix"><p style="margin: 5px 12px 5px 80px;" class=" pull-left">${comment.replyMsg}</p></div>
+<%--                        展开回复--%>
+                        <c:if test="${comment.replyList.size()!=0}">
                         <p id="downBtn${c.index}" onclick="function downComment() {
                             $('#replyCommentList${c.index}').slideDown('fast');
                             $('#downBtn${c.index}').css('display','none');
                             $('#upBtn${c.index}').css('display','block');
                         }
                         downComment()" style="cursor: hand;" class="text-info text-center">展开回复<span class="glyphicon glyphicon-menu-down"></span></p>
+                        </c:if>
+
+<%--                        收起回复--%>
                         <p id="upBtn${c.index}" onclick="function upComment() {
                             $('#replyCommentList${c.index}').slideUp('fast');
                              $('#upBtn${c.index}').css('display','none');
@@ -163,19 +185,13 @@
                         }
                         upComment()" style="display:none;cursor: hand;" class="text-info text-center">收起回复<span class="glyphicon glyphicon-menu-up"></span></p>
                         <div class="list-group" id="replyCommentList${c.index}" style="display: none">
-                            <a href="#" class="list-group-item ">
-                                Cras justo odio
-                            </a>
-                            <a href="#" class="list-group-item">张三  回复  李四：Dapibus ac facilisis in</a>
-                            <a href="#" class="list-group-item">张三  回复  李四：Morbi leo risus</a>
-                            <a href="#" class="list-group-item">张三  回复  李四：Porta ac consectetur ac</a>
-                            <a href="#" class="list-group-item">张三  回复  李四：Vestibulum at eros</a>
+                            <c:forEach items="${comment.replyList}" var="reply">
+                                <a href="#" class="list-group-item">${reply.fromUser.username}  回复  ${reply.toUser.username}：${reply.replyMsg}</a>
+                            </c:forEach>
                         </div>
-
                     </div>
                 </c:forEach>
             </div>
-
         </div>
     </div>
     <div class="sideright" style="float: right;width: 20%;position:sticky;top:  30px;">
@@ -200,10 +216,10 @@
             </ul>
         </div>
         <div class="newcomment" style="float: left;">
-
         </div>
     </div>
 </div>
+
 </body>
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -230,6 +246,28 @@
         })})
 </script>
 <script>
+    function submitReply(toUserId,fromUserId,commentId,modelIndex) {
+
+    $.post(
+        "${basePath}reply/submitReply",
+        {
+            replyMsg:$('#replyComment'+modelIndex).val(),
+            toUserId:toUserId,
+            fromUserId:fromUserId,
+            commentId:commentId
+        },
+        function (json) {
+            if (json.status===200) {
+                console.log("提交成功");
+                location.reload();
+            }else{
+                console.log("服务器繁忙");
+            }
+        }
+    )
+
+
+    }
     function submitComment() {
         $("#submitComment").css("display","block");
         $.post(
@@ -239,9 +277,9 @@
                 replyMsg: $("#commentFrame").val()
             },
             function (json) {
-                if (json.status == 200) {
+                if (json.status === 200) {
                     location.reload();
-                }else if (json.status == 400) {
+                }else if (json.status === 400) {
                     $("#loginDownBtn").trigger("click");
                 }else{
                     alert("服务器繁忙");
@@ -280,5 +318,7 @@
             }
         });
     }
+
+
 </script>
 </html>

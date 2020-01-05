@@ -24,7 +24,7 @@ public class ReplyEntity {
     private String replyMsg;
     private Date createDate;
     private int isDelete;
-    private User formUser;
+    private User fromUser;
     private User toUser;
 
 }

@@ -2,10 +2,8 @@ package service;
 
 import Utils.MapperBuilder;
 import dao.*;
-import org.apache.ibatis.annotations.Mapper;
 import pojo.dbtable.Article;
 import Utils.reflect.ServiceMapping;
-import pojo.dbtable.Category;
 import pojo.dbtable.User;
 import pojo.interacion.ArticleListEntity;
 import pojo.interacion.CategoryEntity;
@@ -72,7 +70,7 @@ public class ArticleService {
             Iterator reIterator = replyEntities.iterator();
             while (reIterator.hasNext()) {
                 ReplyEntity re = (ReplyEntity) reIterator.next();
-                re.setFormUser(new MapperBuilder<UserMapper>().build(UserMapper.class).queryUserByUid(re.getFromUserId()));
+                re.setFromUser(new MapperBuilder<UserMapper>().build(UserMapper.class).queryUserByUid(re.getFromUserId()));
                 re.setToUser(new MapperBuilder<UserMapper>().build(UserMapper.class).queryUserByUid(re.getToUserId()));
             }
             ce.setReplyList(replyEntities);

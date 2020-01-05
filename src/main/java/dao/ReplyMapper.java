@@ -1,5 +1,6 @@
 package dao;
 
+import org.apache.ibatis.annotations.Insert;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
 import org.apache.ibatis.annotations.Update;
@@ -23,4 +24,9 @@ public interface ReplyMapper {
 
     @Update("update blog_reply set is_delete = 1 where comment_id = ${commentId} and is_delete=0")
     int deleteReferenceComment(@Param("commentId") Integer commentId);
+
+    @Insert("insert into blog_reply " +
+            "(comment_id,to_user_id,from_user_id,reply_msg) " +
+            "values(${commentId},${toUserId},${fromUserId},'${replyMsg}')")
+    int insertReply(Reply reply);
 }
