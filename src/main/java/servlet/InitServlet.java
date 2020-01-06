@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -38,7 +39,11 @@ public class InitServlet extends HttpServlet {
 
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        analysisInvoke(parseRequestPath(req, resp),req,resp);
+        String reqPattern = parseRequestPath(req, resp);
+        if (reqPattern.contains(".jsp")) {
+            System.out.println(reqPattern);
+        }
+        analysisInvoke(reqPattern,req,resp);
     }
 
     public String parseRequestPath(HttpServletRequest req, HttpServletResponse resp) {
@@ -61,8 +66,22 @@ public class InitServlet extends HttpServlet {
                 System.out.println(reqPattern+"匹配成功");
                 isMatch = true;
                 System.out.println(((String) patternMap.get(s)) + "方法开始调用");
-                aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class).invoke(aClass.newInstance(), req, resp);
-                System.out.println(((String) patternMap.get(s)) + "方法调用完成");
+                try {
+                    aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class).invoke(aClass.newInstance(), req, resp);
+                    System.out.println(((String) patternMap.get(s)) + "方法调用完成");
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                } catch (IllegalArgumentException e) {
+                    e.printStackTrace();
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                } catch (InstantiationException e) {
+                    e.printStackTrace();
+                }
             }
         }
         if (!isMatch) {

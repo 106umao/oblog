@@ -6,6 +6,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpFilter;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 /**
@@ -17,9 +19,13 @@ import java.io.IOException;
 @WebFilter(urlPatterns="/*")
 public class CharacterFilter extends HttpFilter {
     @Override
-    public void doFilter(ServletRequest req, ServletResponse res, FilterChain chain) throws IOException, ServletException {
+    public void doFilter(HttpServletRequest req, HttpServletResponse res, FilterChain chain) throws IOException, ServletException {
+        String path = req.getContextPath();
         req.setCharacterEncoding("utf-8");
-        res.setContentType("text/html;charset=utf-8");
+        if (path.contains(".css") || path.contains(".js") || path.contains(".html")) {
+            System.out.println(path);
+        }else{
+        }
         chain.doFilter(req, res);
     }
 }

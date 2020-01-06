@@ -35,7 +35,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${loginUser!=null}">
                     <li><img src="image/${loginUser.avatar}" class="avatar img-circle" alt="头像"/></li>
-                    <li><a href="#">我的消息 <span class="badge">14</span></a></li>
+                    <c:if test="${loginUser.role!=0}">
+                        <li><a href="admin/Manager.jsp">后台管理</a></li>
+                    </c:if>
                     <li><a style="cursor:pointer;" onclick="logout()"><span class="glyphicon glyphicon-off">退出登录</span></a></li>
                 </c:if>
                 <c:if test="${loginUser==null}">
@@ -124,12 +126,12 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                     <ul class="clearfix">
-                        <textarea id="commentFrame" onload="commentBlur()" class="form-control" onblur="commentBlur()" onfocus="commentFocus()" rows="4" placeholder="想对作者说点什么"></textarea>
+                        <textarea id="commentFrame" class="form-control" onfocus="commentFocus()" rows="4" placeholder="想对作者说点什么"></textarea>
                         <c:if test="${loginUser!=null}">
                             <button class="btn btn-danger pull-right" style=" margin-top:10px;display: none" id="submitComment" onclick="submitComment()">发表评论</button>
                         </c:if>
                         <c:if test="${loginUser==null}">
-                            <button disabled class="btn btn-danger pull-right" style=" margin-top:10px;display: none" id="submitComment" onclick="submitComment()">登陆后评论</button>
+                            <button disabled class="btn btn-danger pull-right" style=" margin-top:10px;display: none" id="asubmitComment" onclick="submitComment()">登陆后评论</button>
                         </c:if>
                     </ul>
                 </div>

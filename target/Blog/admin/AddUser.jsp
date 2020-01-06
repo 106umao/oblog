@@ -99,7 +99,7 @@
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>用户管理
@@ -114,14 +114,14 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a href="admin/AddUser.jsp" class="nav-link">
+                <a href="admin/AddUser.jsp" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>添加用户</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview menu-open">
+          <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-tags"></i>
               <p>类别管理
@@ -130,7 +130,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="adminC/categoryList" class="nav-link active">
+                <a href="adminC/categoryList" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>类别列表</p>
                 </a>
@@ -175,27 +175,44 @@
   </aside>
 
   <!-- Content Wrapper. Contains page content -->
-  <div id="table" class="container">
-    <table class="table">
-      <thead>
-      <th>categoryId</th>
-      <th>categoryName</th>
-      <th>isDelete</th>
-      <th>operator</th>
+  <div class="container" style="margin-left: 40%;margin-top: 100px">
+    <form class="form-horizontal">
+      <div class="form-group">
 
-      </thead>
-    <c:forEach items="${categoryList}" var="cg">
-      <tr>
-        <td>${cg.categoryId}</td>
-        <td>${cg.categoryName}</td>
-        <td>${cg.isDelete}</td>
-        <td><a href="javascript:deleteObj('${cg.categoryId}')">删除</a></td>
+        <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username:</label>
+        <div class="col-sm-3 input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+          <input type="text" class="form-control" name="username" id="username" placeholder="username">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword" class="col-sm-offset-3 col-sm-2 control-label">Password:</label>
+        <div class="col-sm-3 input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-ice-lolly"></span></span>
+          <input type="password" class="form-control" name="password" id="inputPassword" placeholder="password">
+        </div>
+      </div>
 
-      </tr>
-    </c:forEach>
-    </table>
+      <div class="form-group">
+        <label for="userRole" class="col-sm-offset-3 col-sm-2 control-label">User Role:</label>
+        <div class="col-sm-3 input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-ok"></span></span>
+          <input type="password" class="form-control" name="role" id="userRole" placeholder="User Role">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-2">
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <button type="button" class="btn btn-primary" onclick="addUser()">提交</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </form>
   </div>
-
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -237,22 +254,27 @@
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
-<script src="admin/dist/js/demo.js"></script>\<script>
+<script src="admin/dist/js/demo.js"></script>
+<script>
+  function addUser() {
+    $.post(
+            "${basePath}adminC/addUser",
+            {
+              username: $("#username").val(),
+              password: $('#inputPassword').val(),
+              role: $('#userRole').val()
+            },
+          function succeed(json) {
+          if (json.status === 200) {
+            alert("添加成功，正在跳转页面");
+            window.location = '${basePath}adminC/userList';
+          }else if (json.status === 400) {
+            alert("用户名已存在");
+          }
+        });
+        }
 
-  function deleteObj(id) {
-    $.get(
-            "${basePath}adminC/deleteCategory?categoryId="+id,
-            function succeed(json){
-              if (json.status === 200) {
-                alert("删除成功");
-                location.reload();
-              }else {
-                alert("删除失败")
-              }
-            }
-    )
 
-  }
 </script>
 </body>
 </html>

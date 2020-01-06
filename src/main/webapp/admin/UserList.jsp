@@ -37,7 +37,7 @@
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Navbar -->
+  <!-- /.navbar -->
   <nav class="main-header navbar navbar-expand navbar-white navbar-light">
     <!-- Left navbar links -->
     <ul class="navbar-nav">
@@ -48,12 +48,8 @@
         <a href="index.jsp" class="nav-link">Home</a>
       </li>
     </ul>
-
-
     <!-- Right navbar links -->
   </nav>
-  <!-- /.navbar -->
-
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
@@ -68,12 +64,13 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-          <img src="用户头像" class="img-circle elevation-2" alt="User Image">
+          <img src="image/${loginUser.avatar}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="admin/#" class="d-block">管理员姓名</a>
+          <a href="#" class="d-block">${loginUser.username}</a>
         </div>
       </div>
+
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -89,20 +86,20 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="article/articleList" class="nav-link">
+                <a href="adminC/articleList" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>文章列表</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="admin/AddArticle.jsp" class="nav-link">
+                <a href="adminC/AddArticle" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>发布文章</p>
                 </a>
               </li>
             </ul>
           </li>
-          <li class="nav-item has-treeview">
+          <li class="nav-item has-treeview menu-open">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-user"></i>
               <p>用户管理
@@ -111,7 +108,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="user/userList" class="nav-link">
+                <a href="adminC/userList" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>用户列表</p>
                 </a>
@@ -133,7 +130,7 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="category/categoryList" class="nav-link">
+                <a href="adminC/categoryList" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>类别列表</p>
                 </a>
@@ -155,13 +152,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="comment/commentList" class="nav-link">
+                <a href="adminC/commentList" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>评论管理</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="reply/replyList" class="nav-link">
+                <a href="adminC/replyList" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>回复管理</p>
                 </a>
@@ -176,12 +173,11 @@
     </div>
     <!-- /.sidebar -->
   </aside>
-
   <!-- Content Wrapper. Contains page content -->
   <div id="table" class="container">
     <table class="table">
       <thead>
-      <th>uid</th>
+      <th>userId</th>
       <th>username</th>
       <th>password</th>
       <th>role</th>
@@ -189,19 +185,22 @@
       <th>about</th>
       <th>email</th>
       <th>is_delete</th>
-      <th>operating</th>
+      <th>operator</th>
+
       </thead>
-      <tr>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-        <td>1</td>
-      </tr>
+      <c:forEach items="${userList}" var="user">
+        <tr>
+          <td>${user.userId}</td>
+          <td>${user.username}</td>
+          <td>${user.password}</td>
+          <td>${user.role}</td>
+          <td>${user.avatar}</td>
+          <td>${user.about}</td>
+          <td>${user.email}</td>
+          <td>${user.isDelete}</td>
+          <td><a href="javascript:deleteUser('${user.userId}')">删除</a></td>
+        </tr>
+      </c:forEach>
     </table>
   </div>
 
@@ -247,5 +246,22 @@
 <script src="admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin/dist/js/demo.js"></script>
+<script>
+
+    function deleteUser(uid) {
+        $.get(
+            "${basePath}adminC/deleteUser?userId="+uid,
+            function succeed(json){
+                if (json.status === 200) {
+                    alert("删除成功");
+                    location.reload();
+                }else {
+                    alert("删除失败")
+                }
+            }
+        )
+
+    }
+</script>
 </body>
 </html>

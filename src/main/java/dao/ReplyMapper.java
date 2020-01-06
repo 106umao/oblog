@@ -29,4 +29,19 @@ public interface ReplyMapper {
             "(comment_id,to_user_id,from_user_id,reply_msg) " +
             "values(${commentId},${toUserId},${fromUserId},'${replyMsg}')")
     int insertReply(Reply reply);
+
+    @Update("update blog_reply set is_delete=1 where comment_id in (select comment_id from blog_comment where article_id = ${articleId})")
+    int deleteReplyByArticleId(@Param("articleId") Integer articleId);
+
+    @Update("update blog_reply set is_delete=1 where from_user_id  = ${uid}")
+    int deleteReplyByUserId(@Param("uid") Integer userId);
+
+    @Select("select * from blog_Reply where is_delete=0")
+    List<Reply> findAllReply();
+
+    @Update("update blog_reply set is_delete =1 where reply_id = ${rid}")
+    int deleteReplyById(@Param("rid") Integer replyId);
+
+    @Update("update blog_reply set is_delete =1 where comment_id =${cid}")
+    int deleteReplyByCommentId(@Param("cid") Integer commentId);
 }

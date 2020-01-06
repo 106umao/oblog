@@ -7,11 +7,11 @@
 %>
 <html>
 <head>
-    <base href="${basePath}">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-     <title>AdminLTE 3 | Dashboard</title>
-    <!-- Tell the browser to be responsive to screen width -->
+  <base href="${basePath}">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
@@ -121,7 +121,7 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item has-treeview">
+                    <li class="nav-item has-treeview menu-open">
                         <a href="#" class="nav-link">
                             <i class="nav-icon fas fa-tags"></i>
                             <p>类别管理
@@ -136,7 +136,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="admin/AddCategory.jsp" class="nav-link">
+                                <a href="admin/AddCategory.jsp" class="nav-link active">
                                     <i class="far fa-circle nav-icon"></i>
                                     <p>添加类别</p>
                                 </a>
@@ -174,13 +174,27 @@
         <!-- /.sidebar -->
     </aside>
   <!-- Content Wrapper. Contains page content -->
-    <div style="position: relative; top: 100px;" class="container jumbotron jumbotron-fluid">
-        <div class="container">
-            <h1 class="display-4">欢迎来到后台管理平台</h1>
-            <p class="lead">在左边的导航栏中选择您要进行的操作</p>
-        </div>
-    </div>
+  <div class="container" style="margin-left: 40%;margin-top: 100px">
+    <form class="form-horizontal">
+      <div class="form-group">
 
+        <label for="categoryName" class="col-sm-offset-3 col-sm-2 control-label">CategoryName:</label>
+        <div class="col-sm-3 input-group">
+          <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
+          <input type="text" class="form-control" id="categoryName" placeholder="Category Name">
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-2">
+          <div class="btn-group btn-group-justified">
+            <div class="btn-group">
+              <input type="button" class="btn btn-primary" value="Submit" onclick="addCategory()"/>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
     <!-- Control sidebar content goes here -->
@@ -223,5 +237,24 @@
 <script src="admin/dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="admin/dist/js/demo.js"></script>
+<script>
+  function addCategory() {
+    $.post(
+            "${basePath}adminC/addCategory",
+            {
+              categoryName: $("#categoryName").val(),
+            },
+            function succeed(json) {
+              if (json.status === 200) {
+                alert("添加成功，正在跳转页面");
+                window.location = '${basePath}adminC/userList';
+              }else if (json.status === 400) {
+                alert("类别名称已存在");
+              }
+            });
+  }
+
+
+</script>
 </body>
 </html>

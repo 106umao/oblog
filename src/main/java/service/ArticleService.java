@@ -28,10 +28,9 @@ public class ArticleService {
         } else if (categoryId != null) {
             articles = new MapperBuilder<ArticleMapper>().build(ArticleMapper.class).findAllArticleByCategory(Integer.parseInt(categoryId));
         } else {
-
             articles = new MapperBuilder<ArticleMapper>().build(ArticleMapper.class).findAllArticleListEntity();
         }
-        List<CategoryEntity> categories = new MapperBuilder<CategoryMapper>().build(CategoryMapper.class).findAllCategory();
+        List<CategoryEntity> categories = new MapperBuilder<CategoryMapper>().build(CategoryMapper.class).findAllCategoryEntity();
         Iterator iterator1 = categories.iterator();
         while (iterator1.hasNext()) {
             CategoryEntity categorye = (CategoryEntity) iterator1.next();

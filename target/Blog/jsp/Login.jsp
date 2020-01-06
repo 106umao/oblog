@@ -35,7 +35,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${loginUser!=null}">
                     <li><img src="image/${loginUser.avatar}" class="avatar img-circle" alt="头像"/></li>
-                    <li><a href="#">我的消息 <span class="badge">14</span></a></li>
+                    <c:if test="${loginUser.role!=0}">
+                        <li><a href="admin/Manager.jsp">后台管理</a></li>
+                    </c:if>
                     <li><a style="cursor:pointer;" onclick="logout()"><span class="glyphicon glyphicon-off">退出登录</span></a></li>
                 </c:if>
                 <c:if test="${loginUser==null}">

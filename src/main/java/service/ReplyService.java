@@ -38,8 +38,12 @@ public class ReplyService {
         } else {
             response.sendError(500, "服务器繁忙");
         }
-
-
     }
+
+    @ServiceMapping("/test")
+    public void test (HttpServletRequest request, HttpServletResponse response) throws IOException {
+    response.sendRedirect("/pblog/admin/AddArticle.jsp");
+    }
+
 
 }

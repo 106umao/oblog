@@ -1,9 +1,6 @@
 package dao;
 
-import org.apache.ibatis.annotations.Insert;
-import org.apache.ibatis.annotations.Param;
-import org.apache.ibatis.annotations.Select;
-import org.apache.ibatis.annotations.Update;
+import org.apache.ibatis.annotations.*;
 import pojo.dbtable.Article;
 import pojo.interacion.ArticleListEntity;
 
@@ -32,7 +29,7 @@ public interface ArticleMapper {
     @Select("select count(article_id) from blog_article where category_id = ${categoryId} and is_delete=0")
     int getArticleCount(@Param("categoryId") int categoryId);
 
-    @Select("select star from blog_article where article_id = ${articleId}")
+    @Select("select star from blog_article where article_id = ${articleId} and is_delete=0")
     int getArticleStar(@Param("articleId") Integer articleId);
 
     @Update("update blog_article set star = ${star} where article_id = ${articleId}")
@@ -43,4 +40,19 @@ public interface ArticleMapper {
 
     @Select("select blog_article.article_id,title,introduction,star,avatar,username from blog_article,blog_user where blog_article.user_id = blog_user.user_id and blog_article.is_delete=0 and blog_user.is_delete=0 and category_id = ${categoryId} group by blog_article.article_id;")
     List<ArticleListEntity> findAllArticleByCategory(@Param("categoryId") int categoryId);
+    @Select("select * from blog_article where is_delete=0")
+    List<Article> findAllArticle();
+
+    @Update("update blog_article set is_delete=1 where is_delete=0 and article_id = ${articleId}")
+    int deleteArticleById(@Param("articleId") Integer articleId);
+
+    @Update("update blog_article set is_delete=1 where is_delete=0 and user_id = ${uid}")
+    int deleteArticleByUserId(@Param("uid") Integer userId);
+
+    @Update("update blog_article set is_delete=1 where is_delete=0 and category_id = ${cid}")
+    int deleteArticleByCategoryId(@Param("cid") Integer categoryId);
+
+    @Insert("insert into blog_article (category_id,user_id,title,introduction,content,release_time,last_modified) values" +
+            "(${categoryId},${userId},'${title}','${introduction}','${content}','${releaseTime}','${releaseTime}') ")
+    int insertArticle(Article article);
 }

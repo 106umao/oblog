@@ -35,7 +35,9 @@
             <ul class="nav navbar-nav navbar-right">
                 <c:if test="${loginUser!=null}">
                     <li><img src="image/${loginUser.avatar}" class="avatar img-circle" alt="头像"/></li>
-                    <li><a href="#">我的消息 <span class="badge">14</span></a></li>
+                    <c:if test="${loginUser.role!=0}">
+                        <li><a href="admin/Manager.jsp">后台管理</a></li>
+                    </c:if>
                     <li><a style="cursor:pointer;" onclick="logout()"><span class="glyphicon glyphicon-off">退出登录</span></a></li>
                 </c:if>
                 <c:if test="${loginUser==null}">
@@ -59,14 +61,14 @@
                                             <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username:</label>
                                             <div class="col-sm-4 input-group">
                                                 <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-                                                <input type="text" name="username" class="form-control" id="username" placeholder="username">
+                                                <input type="text" name="username" class="form-control" id="rusername" placeholder="username">
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="inputPassword" class="col-sm-offset-3 col-sm-2 control-label">Password:</label>
                                             <div class="col-sm-4 input-group">
                                                 <span class="input-group-addon"><span class="glyphicon glyphicon-ice-lolly"></span></span>
-                                                <input type="password" name="password" class="form-control" id="inputPassword" placeholder="password">
+                                                <input type="password" name="password" class="form-control" id="rpassword" placeholder="password">
                                             </div>
                                             <p id="loginmsg"></p>
                                         </div>
@@ -74,7 +76,7 @@
                                             <div class="col-sm-offset-5 col-sm-6">
                                                 <button id="loginBtn" onclick="login()" class="btn btn-primary">Sign in</button>
                                                 <label>
-                                                    <a href="jsp/Register.jsp">Register Count</a>
+                                                    <a href="jsp/Register.jsp">Register Account</a>
                                                 </label>
                                             </div>
                                         </div>
@@ -104,20 +106,20 @@
 </nav>
 
 <h3 style="margin-top:200px;text-align: center; position: relative;left: -20px;bottom: 10px;">用户注册</h3>
-<form class="form-horizontal">
+<form action="user/register" method="post" class="form-horizontal">
     <div class="form-group">
 
         <label for="username" class="col-sm-offset-3 col-sm-2 control-label">Username:</label>
         <div class="col-sm-2 input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-user"></span></span>
-            <input type="text" class="form-control" id="username" placeholder="username">
+            <input type="text" class="form-control" name="useranme" id="username" placeholder="username">
         </div>
     </div>
     <div class="form-group">
         <label for="inputPassword" class="col-sm-offset-3 col-sm-2 control-label">Password:</label>
         <div class="col-sm-2 input-group">
             <span class="input-group-addon"><span class="glyphicon glyphicon-ice-lolly"></span></span>
-            <input type="password" class="form-control" id="inputPassword" placeholder="password">
+            <input type="password" class="form-control" name="password" id="inputPassword" placeholder="password">
         </div>
     </div>
     <div class="form-group">
@@ -131,7 +133,7 @@
         <div class="col-sm-offset-5 col-sm-2">
             <div class="btn-group btn-group-justified">
                 <div class="btn-group">
-                    <input type="submit" class="btn btn-primary" value="Sign Up"/>
+                    <input type="button" class="btn btn-primary" onclick="register()" value="Sign Up"/>
                 </div>
             </div>
         </div>
@@ -145,8 +147,8 @@
     function login() {
         var url = "${basePath}user/login";
         var data = {
-            username : $("#username").val(),
-            password : $("#inputPassword").val()
+            username : $("#rusername").val(),
+            password : $("#rpassword").val()
         };
         var callBack = function(json){
             if (json.status == 200) {
@@ -166,6 +168,24 @@
             }
         });
     }
+
+    function register() {
+        $.post(
+            "${basePath}user/register",
+            {
+                username: $("#username").val(),
+                password: $('#inputPassword').val(),
+            },
+            function succeed(json) {
+                if (json.status === 200) {
+                    alert("注册成功，快去登录吧");
+                    $('#loginDownBtn').click();
+                }else if (json.status === 400) {
+                    alert("用户名已存在");
+                }
+            });
+    }
+
 </script>
 
 </html>

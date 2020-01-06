@@ -64,4 +64,41 @@ public class UserService {
         }
         response.getWriter().write(JSONDataUtils.toJson(serverResponse));
     }
+
+    @ServiceMapping("/register")
+    public void register(HttpServletRequest req, HttpServletResponse resp) throws Exception {
+        ServerResponse serverResponse = new ServerResponse();
+        String username = req.getParameter("username");
+        String password = req.getParameter("password");
+        Integer role = 0;
+        User addUser = new User();
+        addUser.setUsername(username);
+        addUser.setPassword(password);
+        addUser.setRole(role);
+        User user = new MapperBuilder<UserMapper>().build(UserMapper.class).getUserByUsername(addUser);
+        if (user!=null) {
+            serverResponse.setStatus(400);
+            serverResponse.setMsg("USER_EXIST");
+            String data = JSONDataUtils.toJson(serverResponse);
+            resp.setContentType("application/json; charset=utf-8");
+            resp.getWriter().write(data);
+        }else{
+            int isAdd = new MapperBuilder<UserMapper>().build(UserMapper.class).insertUser(addUser);
+            if (isAdd ==1) {
+                serverResponse.setStatus(200);
+                serverResponse.setMsg("OK");
+                String data = JSONDataUtils.toJson(serverResponse);
+                resp.setContentType("application/json; charset=utf-8");
+                resp.getWriter().write(data);
+            }else{
+                serverResponse.setStatus(400);
+                serverResponse.setMsg("CANT_CREATE_USER");
+                String data = JSONDataUtils.toJson(serverResponse);
+                resp.setContentType("application/json; charset=utf-8");
+                resp.getWriter().write(data);
+            }
+        }
+
+
+    }
 }
