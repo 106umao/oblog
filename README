@@ -1,2 +1,2 @@
-新建后端 rearend分支用于编写restful风格的servlet资源处理器
-master继续进行web页面的开发
+master分支属于html页面
+项目由servlet+jsp完成 在rearend分支里，采用idea编写，使用idea2019版本以上直接git就可以使用，sql文件也在文件夹里
