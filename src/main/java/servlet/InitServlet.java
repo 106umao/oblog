@@ -67,7 +67,9 @@ public class InitServlet extends HttpServlet {
                 isMatch = true;
                 System.out.println(((String) patternMap.get(s)) + "方法开始调用");
                 try {
-                    aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class).invoke(aClass.newInstance(), req, resp);
+                    aClass.getMethod((String) patternMap.get(s), HttpServletRequest.class, HttpServletResponse.class)
+                            .invoke(
+                                    aClass.newInstance(), req, resp);
                     System.out.println(((String) patternMap.get(s)) + "方法调用完成");
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();

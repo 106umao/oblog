@@ -23,6 +23,7 @@ public class FileUtils {
                 visitAllDirsAndFiles(new File(dir,children[i]));
             }
         }
+        System.out.println("debug:filelist-->"+fileList);
     }
 
 }

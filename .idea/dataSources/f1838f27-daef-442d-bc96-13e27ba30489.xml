@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="presional_blog@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.15">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.17">
     <root id="1">
       <ServerVersion>8.0.18</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -21,7 +21,6 @@
     </schema>
     <schema id="6" parent="1" name="persional_blog">
       <Current>1</Current>
-      <Visible>1</Visible>
       <Collation>utf8mb4_0900_ai_ci</Collation>
     </schema>
     <schema id="7" parent="1" name="sys">

@@ -19,9 +19,12 @@ import java.util.Map;
 public class MappingHandler {
     public static Map<String, String> map = null;
     public static void init( String packageName) throws ClassNotFoundException, URISyntaxException, IOException {
+        System.out.println("debug:packageName-->"+packageName);
         map = new HashMap<>();
         List allPattern = PatternUtils.getAllPattern(packageName);
+        System.out.println("debug:allPattern:-->"+allPattern);
         for(String s:(String[])allPattern.toArray(new String[0])) {
+            System.out.println("debug:映射路径-->"+s);
             for (Method m : Class.forName(s).getMethods()) {
                 ServiceMapping sm = m.getAnnotation(ServiceMapping.class);
                 if ( sm!= null) {
