@@ -1,8 +1,7 @@
 ### 项目简介
 基于mysql+servlet+jsp+mybatis的多人博客系统（大二课程设计）
 ### 项目功能及开发背景
-大二上学期学习jsp进行web开发的课程设计项目，自己动手稍微封装了一下Servlet，代码设计略微混乱。对入门web开发有一定帮助
-技术使用了jsp+自己封装的简易mvc+mybatis IDE使用的Intellj IDEA 数据库使用Mysql
+大二上学期学习jsp进行web开发的课程设计项目，巩固OOP面向对象设计思想。此项目适合初学java或进阶javaweb的同学下载学习，作者水平虽不高，此项目代码也比较烂，但用来加深对所学知识的理解还是稍有帮助。
 ### 项目特色
 简易封装servlet，自定义@ServiceMapping注解类，自定义启动容器Service扫描
 #### 部分代码
