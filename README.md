@@ -75,7 +75,7 @@ public class MappingHandler {
     }
 ```
 ### 项目安装启动 
-* using IDEA new project from version control ``` bash clone git@github.com:106umao/pblog.git ```
+* 使用IDEA new project from version control  ```bash git clone git@github.com:106umao/pblog.git ```
 * 1.运行sql文件构建数据库结构
 * 2.git clone到本地通过idea打开项目
 * 3.修改resources下mybatis-config.xml文件中的数据库连接信息
