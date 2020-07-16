@@ -1,5 +1,5 @@
 ### 项目简介
-基于mysql+servlet+jsp+mybatis的多人博客系统（大二课程设计）  [重构项目地址](https://github.com/106umao/nblog)
+基于mysql8+servlet+jsp+mybatis tomcat9的多人博客系统（大二课程设计）  [重构项目地址](https://github.com/106umao/nblog)
 ### 项目功能及开发背景
 大二上学期学习jsp进行web开发的课程设计项目，巩固OOP面向对象设计思想。此项目适合初学java或进阶javaweb的同学下载学习，作者水平虽不高，此项目代码也比较烂，但用来加深对所学知识的理解还是稍有帮助。
 ### 项目特色
@@ -75,6 +75,7 @@ public class MappingHandler {
     }
 ```
 ### 项目安装启动 
+* using IDEA new project from version control ``` bash clone git@github.com:106umao/pblog.git ```
 * 1.运行sql文件构建数据库结构
 * 2.git clone到本地通过idea打开项目
 * 3.修改resources下mybatis-config.xml文件中的数据库连接信息
