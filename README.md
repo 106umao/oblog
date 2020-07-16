@@ -1,5 +1,5 @@
 ### 项目简介
-基于mysql+servlet+jsp+mybatis的多人博客系统（大二课程设计）重构项目地址：[nblog](https://github.com/106umao/nblog)
+基于mysql+servlet+jsp+mybatis的多人博客系统（大二课程设计）  [重构项目地址](https://github.com/106umao/nblog)
 ### 项目功能及开发背景
 大二上学期学习jsp进行web开发的课程设计项目，巩固OOP面向对象设计思想。此项目适合初学java或进阶javaweb的同学下载学习，作者水平虽不高，此项目代码也比较烂，但用来加深对所学知识的理解还是稍有帮助。
 ### 项目特色
@@ -82,4 +82,5 @@ public class MappingHandler {
 
 ### 写在最后
 由于没学设计模式，log日志处理，导致自己封装的几个类层次有些混乱，代码有些冗余，后续学习了新知识会逐步改进。欢迎大家call我邮箱（578961953@qq.com），一起讨论技术 
+项目已重构 [重构项目地址](https://github.com/106umao/nblog)
 
