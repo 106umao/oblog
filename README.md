@@ -1,5 +1,5 @@
 ### 项目简介
-基于mysql8+servlet+jsp+mybatis tomcat9的多人博客系统（大二课程设计）  [重构项目地址](https://github.com/106umao/nblog)
+基于mysql8+servlet+jsp+mybatis tomcat9的多人博客系统（大二课程设计）  [重构项目地址](https://github.com/106umao/nblog) [演示地址](http://bangju.club/Blog/)
 ### 项目功能及开发背景
 大二上学期学习jsp进行web开发的课程设计项目，巩固OOP面向对象设计思想。此项目适合初学java或进阶javaweb的同学下载学习，作者水平虽不高，此项目代码也比较烂，但用来加深对所学知识的理解还是稍有帮助。
 ### 项目特色
